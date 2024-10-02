@@ -15,6 +15,8 @@ public class GroundEnemyMovements : MonoBehaviour
 
     void EnemyAutoMove()
     {
-        transform.Translate(Vector3.left * groundEnemySpeed * Time.fixedDeltaTime);
+        if (PlayerPrefs.GetInt("GamePaused") == 0) {
+            transform.Translate(Vector3.left * groundEnemySpeed * Time.fixedDeltaTime);
+        }
     }
 }

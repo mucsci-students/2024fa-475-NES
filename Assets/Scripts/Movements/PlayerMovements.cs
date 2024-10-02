@@ -20,6 +20,8 @@ public class PlayerMovements : MonoBehaviour
 
     void PlayerAutoMove()
     {
-        transform.Translate(Vector3.right * playerSpeed * Time.fixedDeltaTime);
+        if (PlayerPrefs.GetInt("GamePaused") == 0) {
+            transform.Translate(Vector3.right * playerSpeed * Time.fixedDeltaTime);
+        }
     }
 }

@@ -30,12 +30,31 @@ public class EnemyCollision : MonoBehaviour
             if (enemyHealth <= 0)
             {
                 playerShooting.SetEnemyDetectionStatus(false);
+                PlayerPrefs.SetInt("PlayerMoney", PlayerPrefs.GetInt("PlayerMoney") + 10);
                 Destroy(gameObject);
             }
         }
 
         if (collision.gameObject.tag == "Wall")
         {
+            int playerArmor = PlayerPrefs.GetInt("PlayerArmor");
+            int playerHealth = PlayerPrefs.GetInt("PlayerHealth");
+            if (playerArmor >= 10)
+            {
+                playerArmor -= 10;
+                PlayerPrefs.SetInt("PlayerArmor", playerArmor);
+            } else if (playerArmor < 10 && playerArmor > 0)
+            {
+                int dif = 10 - playerArmor;
+                playerArmor = 0;
+                PlayerPrefs.SetInt("PlayerArmor", playerArmor);
+                playerHealth -= dif;
+                PlayerPrefs.SetInt("PlayerHealth", playerHealth);
+            } else if (playerArmor == 0)
+            {
+                playerHealth -= 10;
+                PlayerPrefs.SetInt("PlayerHealth", playerHealth);
+            }
             Destroy(gameObject);
         }
     }
