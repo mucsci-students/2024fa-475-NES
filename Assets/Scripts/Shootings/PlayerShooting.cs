@@ -36,7 +36,7 @@ public class PlayerShooting : MonoBehaviour
     {
         gunStat = gun.GetComponent<GunStat>();
         bulletSpeed = gunStat.GetBulletSpeed();
-        fireRate = gunStat.GetBulletFireRate();
+        fireRate = gunStat.GetBulletFireRate() / PlayerPrefs.GetInt("PlayerWeaponLevel");
         bulletDamage = gunStat.GetBulletDamage();
     }
 
@@ -56,7 +56,7 @@ public class PlayerShooting : MonoBehaviour
     void UpdateGunStat()
     {
         bulletSpeed = gunStat.GetBulletSpeed();
-        fireRate = gunStat.GetBulletFireRate();
+        fireRate = gunStat.GetBulletFireRate() / PlayerPrefs.GetInt("PlayerWeaponLevel");
         bulletDamage = gunStat.GetBulletDamage();
     }
 
