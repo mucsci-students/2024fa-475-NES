@@ -8,6 +8,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] Transform gunTransform;
     [SerializeField] GameObject gun;
+    [SerializeField] LayerMask enemyLayerMask; // LayerMask for enemies only
 
     [SerializeField] float firstAirRayDistance = 35f;
     [SerializeField] float secondAirRayDistance = 40f;
@@ -31,12 +32,13 @@ public class PlayerShooting : MonoBehaviour
     float bulletSpeed;
     float fireRate;
     float bulletDamage;
+    int weaponLevelTrack = 1;
 
     void Start()
     {
         gunStat = gun.GetComponent<GunStat>();
         bulletSpeed = gunStat.GetBulletSpeed();
-        fireRate = gunStat.GetBulletFireRate() / PlayerPrefs.GetInt("PlayerWeaponLevel");
+        fireRate = gunStat.GetBulletFireRate();
         bulletDamage = gunStat.GetBulletDamage();
     }
 
@@ -55,9 +57,19 @@ public class PlayerShooting : MonoBehaviour
 
     void UpdateGunStat()
     {
+        if (PlayerPrefs.GetInt("PlayerWeaponLevel") > weaponLevelTrack && fireRate > 0f)
+        {
+            ++weaponLevelTrack;
+            gunStat.SetBulletFireRate(fireRate - 0.03f);
+            fireRate = gunStat.GetBulletFireRate();
+        }
+        if(fireRate <= 0f)
+        {
+            gunStat.SetBulletFireRate(0.1f);
+        }
         bulletSpeed = gunStat.GetBulletSpeed();
-        fireRate = gunStat.GetBulletFireRate() / PlayerPrefs.GetInt("PlayerWeaponLevel");
         bulletDamage = gunStat.GetBulletDamage();
+        //print($"Fire Rate: {fireRate}");
     }
 
     void PressToShoot()
@@ -74,7 +86,6 @@ public class PlayerShooting : MonoBehaviour
         if (Time.time >= nextFireTime && enemyDetected)
         {
             FireBullet();
-            nextFireTime = Time.time + fireRate; // Set the next time the gun can shoot
         }
     }
 
@@ -105,6 +116,7 @@ public class PlayerShooting : MonoBehaviour
             // Always apply force in the bullet's forward (right) direction
             bullet_rigidbody.AddForce(bullet.transform.right * bulletSpeed, ForceMode2D.Impulse);
         }
+        nextFireTime = Time.time + fireRate; // Set the next time the gun can shoot
     }
 
     void RaycastDetection()
@@ -114,62 +126,68 @@ public class PlayerShooting : MonoBehaviour
         // Cast a ray at an adjustable angle to the right and draw it
         Vector2 firstAirDirection = Quaternion.Euler(0, 0, firstAirRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, firstAirDirection * firstAirRayDistance, Color.red);
-        hit = Physics2D.Raycast(gunTransform.position, firstAirDirection, firstAirRayDistance);
+        hit = Physics2D.Raycast(gunTransform.position, firstAirDirection, firstAirRayDistance, enemyLayerMask);
         if (hit.collider != null && hit.collider.CompareTag("Enemy"))
         {
             isGroundEnemy = false;
             activeShootAngle = firstAirRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
+            //Debug.Log("Hit enemy at " + activeShootAngle + " degrees: " + hit.collider.name);
         }
 
         Vector2 secondAirDirection = Quaternion.Euler(0, 0, secondAirRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, secondAirDirection * secondAirRayDistance, Color.blue);
-        hit = Physics2D.Raycast(gunTransform.position, secondAirDirection, secondAirRayDistance);
+        hit = Physics2D.Raycast(gunTransform.position, secondAirDirection, secondAirRayDistance, enemyLayerMask);
         if (hit.collider != null && hit.collider.CompareTag("Enemy"))
         {
             isGroundEnemy = false;
             activeShootAngle = secondAirRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
+            //Debug.Log("Hit enemy at " + activeShootAngle + " degrees: " + hit.collider.name);
         }
 
         Vector2 thirdAirDirection = Quaternion.Euler(0, 0, thirdAirRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, thirdAirDirection * thirdAirRayDistance, Color.yellow);
-        hit = Physics2D.Raycast(gunTransform.position, thirdAirDirection, thirdAirRayDistance);
+        hit = Physics2D.Raycast(gunTransform.position, thirdAirDirection, thirdAirRayDistance, enemyLayerMask);
         if (hit.collider != null && hit.collider.CompareTag("Enemy"))
         {
             isGroundEnemy = false;
             activeShootAngle = thirdAirRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
+            //Debug.Log("Hit enemy at " + activeShootAngle + " degrees: " + hit.collider.name);
         }
 
         Vector2 fourthAirDirection = Quaternion.Euler(0, 0, fourthAirRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, fourthAirDirection * fourthAirRayDistance, Color.cyan);
-        hit = Physics2D.Raycast(gunTransform.position, fourthAirDirection, fourthAirRayDistance);
+        hit = Physics2D.Raycast(gunTransform.position, fourthAirDirection, fourthAirRayDistance, enemyLayerMask);
         if (hit.collider != null && hit.collider.CompareTag("Enemy"))
         {
             isGroundEnemy = false;
             activeShootAngle = fourthAirRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
+            //Debug.Log("Hit enemy at " + activeShootAngle + " degrees: " + hit.collider.name);
         }
 
         Vector2 fifthAirDirection = Quaternion.Euler(0, 0, fifthAirRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, fifthAirDirection * fifthAirRayDistance, Color.white);
-        hit = Physics2D.Raycast(gunTransform.position, fifthAirDirection, fifthAirRayDistance);
+        hit = Physics2D.Raycast(gunTransform.position, fifthAirDirection, fifthAirRayDistance, enemyLayerMask);
         if (hit.collider != null && hit.collider.CompareTag("Enemy"))
         {
             isGroundEnemy = false;
             activeShootAngle = fifthAirRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
+            //Debug.Log("Hit enemy at " + activeShootAngle + " degrees: " + hit.collider.name);
         }
 
         Vector2 groundDirection = Quaternion.Euler(0, 0, groundRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, groundDirection * groundRayDistance, Color.green);
-        hit = Physics2D.Raycast(gunTransform.position, groundDirection, groundRayDistance);
+        hit = Physics2D.Raycast(gunTransform.position, groundDirection, groundRayDistance, enemyLayerMask);
         if (hit.collider != null && hit.collider.CompareTag("Enemy"))
         {
             isGroundEnemy = true;
             activeShootAngle = groundRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
+            //Debug.Log($"Distance {groundRayDistance}");
         }
     }
 }

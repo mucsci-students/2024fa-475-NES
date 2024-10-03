@@ -14,6 +14,7 @@ public class TriggerSpawn : MonoBehaviour
     public GameObject spawningObject2;
     public GameObject spawningObject3;
     public GameObject spawningObject4;
+    bool isStage4 = false;
 
     void Start()
     {
@@ -39,27 +40,38 @@ public class TriggerSpawn : MonoBehaviour
         if (hit.collider != null && hit.collider.CompareTag("Stage1"))
         {
             spawningObject1.SetActive(true);
-            Debug.Log("First Check Point!");
+            //Debug.Log("First Check Point!");
         }
         else if (hit.collider != null && hit.collider.CompareTag("Stage2"))
         { 
             spawningObject1.SetActive(false);
             spawningObject2.SetActive(true);
-            Debug.Log("Second Check Point!");
+            //Debug.Log("Second Check Point!");
         }
         else if (hit.collider != null && hit.collider.CompareTag("Stage3"))
         {
             spawningObject2.SetActive(false);
             spawningObject3.SetActive(true);
-            Debug.Log("Third Check Point!");
+            //Debug.Log("Third Check Point!");
         }
         else if (hit.collider != null && hit.collider.CompareTag("Stage4"))
         {
-            spawningObject3.SetActive(false);
-            spawningObject4.SetActive(true);
-            Debug.Log("Fourth Check Point!");
-            //PlayerMovements movement = player.GetComponent<PlayerMovements>();
-            //movement.SetPlayerSpeed(0f);
+            isStage4 = true;
+            if (isStage4)
+            {
+                spawningObject3.SetActive(false);
+                spawningObject4.SetActive(true);
+                PlayerMovements movement = player.GetComponent<PlayerMovements>();
+                movement.SetPlayerSpeed(0f);
+            }
+            Invoke("SetBossSpawnFalse", 5f);
+            //Debug.Log("Fourth Check Point!");
         }
+    }
+
+    void SetBossSpawnFalse()
+    {
+        isStage4 = false;
+        spawningObject4.SetActive(false);
     }
 }

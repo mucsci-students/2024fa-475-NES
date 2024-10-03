@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 99592718359860561}
   - component: {fileID: 7256231961099845105}
   - component: {fileID: 1064951128789831548}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: S3MediumAirEnemy 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -198,6 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0fe65d1e260524cbb922462ba1fb67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  airEnemySpeed: 1.5
-  strikeSpeed: 8
-  straightDuration: 3
+  airEnemySpeed: 0.5
+  strikeSpeed: 1.5
+  straightDuration: 3.5

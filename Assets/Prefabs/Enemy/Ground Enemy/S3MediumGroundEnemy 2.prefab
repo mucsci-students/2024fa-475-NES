@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79f44ceb0cb47f44b1ae5475ea515c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  groundEnemySpeed: 1
+  groundEnemySpeed: 0.5
 --- !u!114 &7036478671428776277
 MonoBehaviour:
   m_ObjectHideFlags: 0
