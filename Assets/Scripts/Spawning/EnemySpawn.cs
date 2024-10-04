@@ -8,7 +8,7 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] Transform spawnArea;  // Reference to the area where enemies should spawn (could be a defined region)
     [SerializeField] float spawnAreaWidth = 10f; // Width of spawn area
     [SerializeField] float spawnAreaHeight = 5f; // Height of spawn area
-    [SerializeField] float timeDelay = 20f; // Time delay between spawning waves
+    [SerializeField] float timeDelay = 8f; // Time delay between spawning waves
     [SerializeField] int firstEnemyNum = 0;
     [SerializeField] int secondEnemyNum = 0;
 
