@@ -424,6 +424,37 @@ public class GameManager : MonoBehaviour
                 // Load the LevelSelect scene
                 UnityEngine.SceneManagement.SceneManager.LoadScene("StartMenu");
             }
+        } else if (currentScene == "GameWin") {
+            // Game Win UI
+            // Display the game win UI here
+            // Game Name
+            GUI.Label(new Rect(centerX - 15, centerY - 100, buttonWidth + 50, buttonHeight), "You Win!", titleStyle);
+            // Restart Button
+            if (GUI.Button(new Rect(centerX, centerY, buttonWidth, buttonHeight), "Restart", buttonStyle))
+            {
+                // Reset stats
+                PlayerPrefs.SetInt("PlayerHealth", 100);
+                PlayerPrefs.SetInt("PlayerArmor", 0);
+                PlayerPrefs.SetInt("PlayerMoney", 0);
+                PlayerPrefs.SetInt("PlayerWeaponLevel", 1);
+                PlayerPrefs.SetInt("PlayerVehicleLevel", 1);
+                PlayerPrefs.SetInt("CurrentLevel", 0);
+                // Load the LevelSelect scene
+                UnityEngine.SceneManagement.SceneManager.LoadScene("StartMenu");
+            }
+
+            // StartMenu Button
+            if (GUI.Button(new Rect(centerX, centerY + 60, buttonWidth, buttonHeight), "Start Menu", buttonStyle))
+            {
+                // Load the StartMenu scene
+                UnityEngine.SceneManagement.SceneManager.LoadScene("StartMenu");
+            }
+
+            if (GUI.Button(new Rect(centerX, centerY + 120, buttonWidth, buttonHeight), "Exit", buttonStyle))
+            {
+                // Exit the application (only works in a built game)
+                Application.Quit();
+            }
         }
     }
 }
