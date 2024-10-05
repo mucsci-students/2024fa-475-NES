@@ -318,44 +318,84 @@ public class GameManager : MonoBehaviour
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Level1");
             }
 
+            string display = "";
+            if (PlayerPrefs.GetInt("LevelOneComplete") == 1) {
+                display = "Level 2";
+            } else {
+                display = "Locked";
+            }
             // Level 2 Button
-            if (GUI.Button(new Rect((Screen.width / 6), centerY - 50, 90, 40), "Level 2", buttonStyle))
+            if (GUI.Button(new Rect((Screen.width / 6), centerY - 50, 90, 40), display, buttonStyle))
             {
-                PlayerPrefs.SetInt("CurrentLevel", 2);
-                // Load the Level2 scene
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
+                if (PlayerPrefs.GetInt("LevelOneComplete") == 1) {
+                    PlayerPrefs.SetInt("CurrentLevel", 2);
+                    // Load the Level2 scene
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
+                }
             }
 
+            string display2 = "";
+            if (PlayerPrefs.GetInt("LevelTwoComplete") == 1) {
+                display2 = "Level 3";
+            } else {
+                display2 = "Locked";
+            }
             // Level 3 Button
-            if (GUI.Button(new Rect((Screen.width / 6) * 2, centerY + 50, 90, 40), "Level 3", buttonStyle))
+            if (GUI.Button(new Rect((Screen.width / 6) * 2, centerY + 50, 90, 40), display2, buttonStyle))
             {
-                PlayerPrefs.SetInt("CurrentLevel", 3);
-                // Load the Level3 scene
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Level3");
+                if (PlayerPrefs.GetInt("LevelTwoComplete") == 1) {
+                    PlayerPrefs.SetInt("CurrentLevel", 3);
+                    // Load the Level3 scene
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Level3");
+                }
             }
 
+            string display3 = "";
+            if (PlayerPrefs.GetInt("LevelThreeComplete") == 1) {
+                display3 = "Level 4";
+            } else {
+                display3 = "Locked";
+            }
             // Level 4 Button
-            if (GUI.Button(new Rect((Screen.width / 6) * 3, centerY - 50, 90, 40), "Level 4", buttonStyle))
+            if (GUI.Button(new Rect((Screen.width / 6) * 3, centerY - 50, 90, 40), display3, buttonStyle))
             {
-                PlayerPrefs.SetInt("CurrentLevel", 4);
-                // Load the Level4 scene
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Level4");
+                if (PlayerPrefs.GetInt("LevelThreeComplete") == 1) {
+                    PlayerPrefs.SetInt("CurrentLevel", 4);
+                    // Load the Level4 scene
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Level4");
+                }
             }
 
+            string display4 = "";
+            if (PlayerPrefs.GetInt("LevelFourComplete") == 1) {
+                display4 = "Level 5";
+            } else {
+                display4 = "Locked";
+            }
             // Level 5 Button
-            if (GUI.Button(new Rect((Screen.width / 6) * 4, centerY + 50, 90, 40), "Level 5", buttonStyle))
+            if (GUI.Button(new Rect((Screen.width / 6) * 4, centerY + 50, 90, 40), display4, buttonStyle))
             {
-                PlayerPrefs.SetInt("CurrentLevel", 5);
-                // Load the Level5 scene
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Level5");
+                if (PlayerPrefs.GetInt("LevelFourComplete") == 1) {
+                    PlayerPrefs.SetInt("CurrentLevel", 5);
+                    // Load the Level5 scene
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Level5");
+                }
             }
 
+            string display5 = "";
+            if (PlayerPrefs.GetInt("LevelFiveComplete") == 1) {
+                display5 = "Level 6";
+            } else {
+                display5 = "Locked";
+            }
             // Level 6 Button
-            if (GUI.Button(new Rect((Screen.width / 6) * 5, centerY - 50, 90, 40), "Level 6", buttonStyle))
+            if (GUI.Button(new Rect((Screen.width / 6) * 5, centerY - 50, 90, 40), display5, buttonStyle))
             {
-                PlayerPrefs.SetInt("CurrentLevel", 6);
-                // Load the Level6 scene
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Level6");
+                if (PlayerPrefs.GetInt("LevelFiveComplete") == 1) {
+                    PlayerPrefs.SetInt("CurrentLevel", 6);
+                    // Load the Level6 scene
+                    UnityEngine.SceneManagement.SceneManager.LoadScene("Level6");
+                }
             }
 
             // Back Button
@@ -383,6 +423,37 @@ public class GameManager : MonoBehaviour
                 PlayerPrefs.SetInt("CurrentLevel", 0);
                 // Load the LevelSelect scene
                 UnityEngine.SceneManagement.SceneManager.LoadScene("StartMenu");
+            }
+        } else if (currentScene == "GameWin") {
+            // Game Win UI
+            // Display the game win UI here
+            // Game Name
+            GUI.Label(new Rect(centerX - 15, centerY - 100, buttonWidth + 50, buttonHeight), "You Win!", titleStyle);
+            // Restart Button
+            if (GUI.Button(new Rect(centerX, centerY, buttonWidth, buttonHeight), "Restart", buttonStyle))
+            {
+                // Reset stats
+                PlayerPrefs.SetInt("PlayerHealth", 100);
+                PlayerPrefs.SetInt("PlayerArmor", 0);
+                PlayerPrefs.SetInt("PlayerMoney", 0);
+                PlayerPrefs.SetInt("PlayerWeaponLevel", 1);
+                PlayerPrefs.SetInt("PlayerVehicleLevel", 1);
+                PlayerPrefs.SetInt("CurrentLevel", 0);
+                // Load the LevelSelect scene
+                UnityEngine.SceneManagement.SceneManager.LoadScene("StartMenu");
+            }
+
+            // StartMenu Button
+            if (GUI.Button(new Rect(centerX, centerY + 60, buttonWidth, buttonHeight), "Start Menu", buttonStyle))
+            {
+                // Load the StartMenu scene
+                UnityEngine.SceneManagement.SceneManager.LoadScene("StartMenu");
+            }
+
+            if (GUI.Button(new Rect(centerX, centerY + 120, buttonWidth, buttonHeight), "Exit", buttonStyle))
+            {
+                // Exit the application (only works in a built game)
+                Application.Quit();
             }
         }
     }
