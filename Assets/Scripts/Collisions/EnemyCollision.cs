@@ -39,20 +39,23 @@ public class EnemyCollision : MonoBehaviour
         {
             int playerArmor = PlayerPrefs.GetInt("PlayerArmor");
             int playerHealth = PlayerPrefs.GetInt("PlayerHealth");
-            if (playerArmor >= 10)
+            int playerVehicleLevel = PlayerPrefs.GetInt("PlayerVehicleLevel");
+            int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+            int damage = 10 / (playerVehicleLevel / currentLevel);
+            if (playerArmor >= damage)
             {
-                playerArmor -= 10;
+                playerArmor -= damage;
                 PlayerPrefs.SetInt("PlayerArmor", playerArmor);
-            } else if (playerArmor < 10 && playerArmor > 0)
+            } else if (playerArmor < damage && playerArmor > 0)
             {
-                int dif = 10 - playerArmor;
+                int dif = damage - playerArmor;
                 playerArmor = 0;
                 PlayerPrefs.SetInt("PlayerArmor", playerArmor);
                 playerHealth -= dif;
                 PlayerPrefs.SetInt("PlayerHealth", playerHealth);
             } else if (playerArmor == 0)
             {
-                playerHealth -= 10;
+                playerHealth -= damage;
                 PlayerPrefs.SetInt("PlayerHealth", playerHealth);
             }
             Destroy(gameObject);
