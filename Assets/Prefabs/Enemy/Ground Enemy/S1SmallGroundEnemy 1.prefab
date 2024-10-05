@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7644594091187270355}
   - component: {fileID: 1705558134591774445}
   - component: {fileID: 1636269157152266446}
+  - component: {fileID: 1705992208519729028}
   m_Layer: 3
   m_Name: S1SmallGroundEnemy 1
   m_TagString: Enemy
@@ -199,3 +200,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ba86d4c6e71754395a1a3966b29eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1705992208519729028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307172693211356186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c2eab6610c1974f8741344e0abdf17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameObject: {fileID: 307172693211356186}
