@@ -165,6 +165,13 @@ public class GameManager : MonoBehaviour
                         PlayerPrefs.SetInt("PlayerMoney", 0);
                         PlayerPrefs.SetInt("PlayerWeaponLevel", 1);
                         PlayerPrefs.SetInt("PlayerVehicleLevel", 1);
+                        PlayerPrefs.SetInt("CurrentLevel", 0);
+                        PlayerPrefs.SetInt("Level1Complete", 0);
+                        PlayerPrefs.SetInt("Level2Complete", 0);
+                        PlayerPrefs.SetInt("Level3Complete", 0);
+                        PlayerPrefs.SetInt("Level4Complete", 0);
+                        PlayerPrefs.SetInt("Level5Complete", 0);
+                        PlayerPrefs.SetInt("Level6Complete", 0);
                     }
 
                 } else {
@@ -329,7 +336,7 @@ public class GameManager : MonoBehaviour
             }
 
             string display = "";
-            if (PlayerPrefs.GetInt("LevelOneComplete") == 1) {
+            if (PlayerPrefs.GetInt("Level1Complete") == 1) {
                 display = "Level 2";
             } else {
                 display = "Locked";
@@ -337,7 +344,7 @@ public class GameManager : MonoBehaviour
             // Level 2 Button
             if (GUI.Button(new Rect((Screen.width / 6), centerY - 50, 90, 40), display, buttonStyle))
             {
-                if (PlayerPrefs.GetInt("LevelOneComplete") == 1) {
+                if (PlayerPrefs.GetInt("Level1Complete") == 1) {
                     PlayerPrefs.SetInt("CurrentLevel", 2);
                     // Load the Level2 scene
                     UnityEngine.SceneManagement.SceneManager.LoadScene("Level2");
@@ -345,7 +352,7 @@ public class GameManager : MonoBehaviour
             }
 
             string display2 = "";
-            if (PlayerPrefs.GetInt("LevelTwoComplete") == 1) {
+            if (PlayerPrefs.GetInt("Level2Complete") == 1) {
                 display2 = "Level 3";
             } else {
                 display2 = "Locked";
@@ -353,7 +360,7 @@ public class GameManager : MonoBehaviour
             // Level 3 Button
             if (GUI.Button(new Rect((Screen.width / 6) * 2, centerY + 50, 90, 40), display2, buttonStyle))
             {
-                if (PlayerPrefs.GetInt("LevelTwoComplete") == 1) {
+                if (PlayerPrefs.GetInt("Level2Complete") == 1) {
                     PlayerPrefs.SetInt("CurrentLevel", 3);
                     // Load the Level3 scene
                     UnityEngine.SceneManagement.SceneManager.LoadScene("Level3");
@@ -361,7 +368,7 @@ public class GameManager : MonoBehaviour
             }
 
             string display3 = "";
-            if (PlayerPrefs.GetInt("LevelThreeComplete") == 1) {
+            if (PlayerPrefs.GetInt("Level3Complete") == 1) {
                 display3 = "Level 4";
             } else {
                 display3 = "Locked";
@@ -369,7 +376,7 @@ public class GameManager : MonoBehaviour
             // Level 4 Button
             if (GUI.Button(new Rect((Screen.width / 6) * 3, centerY - 50, 90, 40), display3, buttonStyle))
             {
-                if (PlayerPrefs.GetInt("LevelThreeComplete") == 1) {
+                if (PlayerPrefs.GetInt("Level3Complete") == 1) {
                     PlayerPrefs.SetInt("CurrentLevel", 4);
                     // Load the Level4 scene
                     UnityEngine.SceneManagement.SceneManager.LoadScene("Level4");
@@ -377,7 +384,7 @@ public class GameManager : MonoBehaviour
             }
 
             string display4 = "";
-            if (PlayerPrefs.GetInt("LevelFourComplete") == 1) {
+            if (PlayerPrefs.GetInt("Level4Complete") == 1) {
                 display4 = "Level 5";
             } else {
                 display4 = "Locked";
@@ -385,7 +392,7 @@ public class GameManager : MonoBehaviour
             // Level 5 Button
             if (GUI.Button(new Rect((Screen.width / 6) * 4, centerY + 50, 90, 40), display4, buttonStyle))
             {
-                if (PlayerPrefs.GetInt("LevelFourComplete") == 1) {
+                if (PlayerPrefs.GetInt("Level4Complete") == 1) {
                     PlayerPrefs.SetInt("CurrentLevel", 5);
                     // Load the Level5 scene
                     UnityEngine.SceneManagement.SceneManager.LoadScene("Level5");
@@ -393,7 +400,7 @@ public class GameManager : MonoBehaviour
             }
 
             string display5 = "";
-            if (PlayerPrefs.GetInt("LevelFiveComplete") == 1) {
+            if (PlayerPrefs.GetInt("Level5Complete") == 1) {
                 display5 = "Level 6";
             } else {
                 display5 = "Locked";
@@ -401,7 +408,7 @@ public class GameManager : MonoBehaviour
             // Level 6 Button
             if (GUI.Button(new Rect((Screen.width / 6) * 5, centerY - 50, 90, 40), display5, buttonStyle))
             {
-                if (PlayerPrefs.GetInt("LevelFiveComplete") == 1) {
+                if (PlayerPrefs.GetInt("Level5Complete") == 1) {
                     PlayerPrefs.SetInt("CurrentLevel", 6);
                     // Load the Level6 scene
                     UnityEngine.SceneManagement.SceneManager.LoadScene("Level6");
