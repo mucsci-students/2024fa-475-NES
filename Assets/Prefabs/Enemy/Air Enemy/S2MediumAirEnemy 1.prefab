@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 99592718359860561}
   - component: {fileID: 7256231961099845105}
   - component: {fileID: 1064951128789831548}
+  - component: {fileID: -6187268534848339051}
   m_Layer: 3
   m_Name: S2MediumAirEnemy 1
   m_TagString: Enemy
@@ -201,3 +202,16 @@ MonoBehaviour:
   airEnemySpeed: 0.5
   strikeSpeed: 1.5
   straightDuration: 3.5
+--- !u!114 &-6187268534848339051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909273443495790074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c211e945642ae8e4ab3d59e43b233fad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameObject: {fileID: 4909273443495790074}
