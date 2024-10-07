@@ -31,6 +31,29 @@ public class EnemyCollision : MonoBehaviour
             {
                 playerShooting.SetEnemyDetectionStatus(false);
                 PlayerPrefs.SetInt("PlayerMoney", PlayerPrefs.GetInt("PlayerMoney") + 10);
+                if (gameObject.tag == "Boss") {
+                    PlayerPrefs.SetInt("CurrentLevelFinished", 1);
+                    switch (PlayerPrefs.GetInt("CurrentLevel")) {
+                        case 1:
+                            PlayerPrefs.SetInt("Level1Complete", 1);
+                            break;
+                        case 2:
+                            PlayerPrefs.SetInt("Level2Complete", 1);
+                            break;
+                        case 3:
+                            PlayerPrefs.SetInt("Level3Complete", 1);
+                            break;
+                        case 4:
+                            PlayerPrefs.SetInt("Level4Complete", 1);
+                            break;
+                        case 5:
+                            PlayerPrefs.SetInt("Level5Complete", 1);
+                            break;
+                        case 6:
+                            PlayerPrefs.SetInt("Level6Complete", 1);
+                            break;
+                    }
+                }
                 Destroy(gameObject);
             }
         }
