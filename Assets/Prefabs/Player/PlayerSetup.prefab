@@ -178,6 +178,9 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2452501704604671322, guid: 5772fea696d61d84295b1cdabb3d27cb, type: 3}
   gunTransform: {fileID: 1568054920925578884}
   gun: {fileID: 8146396246138888512}
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   firstAirRayDistance: 35
   secondAirRayDistance: 40
   thirdAirRayDistance: 45
@@ -273,7 +276,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.2489071, y: 16.917109}
+  m_Offset: {x: -41.95404, y: 16.917109}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -284,7 +287,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.4978142, y: 39.90202}
+  m_Size: {x: 2.6699104, y: 39.90202}
   m_EdgeRadius: 0
 --- !u!1 &6684975870480272910
 GameObject:
