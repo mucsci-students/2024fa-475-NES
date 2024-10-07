@@ -187,10 +187,6 @@ public class GameManager : MonoBehaviour
                         // Return to the options menu
                         showInstructions = false;
                     }
-                    {
-                        // Return to the main menu
-                        showInstructions = false;
-                    }
                 }
 
             }
