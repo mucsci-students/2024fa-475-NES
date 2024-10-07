@@ -319,9 +319,14 @@ public class GameManager : MonoBehaviour
                 GUI.Label(new Rect(centerX - 15, centerY - 100, buttonWidth + 50, buttonHeight), "Level Complete", titleStyle);
                 if (GUI.Button(new Rect(centerX, centerY, buttonWidth, buttonHeight), "Return", buttonStyle))
                 {
+                    int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
                     PlayerPrefs.SetInt("CurrentLevelFinished", 0);
                     PlayerPrefs.SetInt("CurrentLevel", 0);
-                    UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelect");
+                    if (currentLevel == 6) {
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("GameWin");
+                    } else {
+                        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelect");
+                    }
                 }
             }
         } else if (currentScene == "LevelSelect") {
