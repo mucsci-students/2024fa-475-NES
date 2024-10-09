@@ -107,18 +107,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frameArray:
-  - {fileID: 342996586, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
-  - {fileID: -1508407001, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
-  - {fileID: 1713103300, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
-  - {fileID: 302292553, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
-  - {fileID: 342996586, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
-  - {fileID: -1508407001, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
-  - {fileID: 1713103300, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
-  - {fileID: 302292553, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
-  - {fileID: 342996586, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
-  - {fileID: -1508407001, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
-  - {fileID: 1713103300, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
-  - {fileID: 302292553, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
+  - {fileID: -752442069, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
+  - {fileID: 41054057, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
+  - {fileID: 1792891523, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
+  - {fileID: -15376334, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
+  - {fileID: -752442069, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
+  - {fileID: 41054057, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
+  - {fileID: 1792891523, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
+  - {fileID: -15376334, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
+  - {fileID: -752442069, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
+  - {fileID: 41054057, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
+  - {fileID: 1792891523, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
+  - {fileID: -15376334, guid: 4afbcaf20db3e064c9361c6c19101904, type: 3}
 --- !u!212 &5983508008259058063
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &6700842560946917606
@@ -269,6 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 150
+  enemyDamage: 20
 --- !u!114 &7127650829391083295
 MonoBehaviour:
   m_ObjectHideFlags: 0
