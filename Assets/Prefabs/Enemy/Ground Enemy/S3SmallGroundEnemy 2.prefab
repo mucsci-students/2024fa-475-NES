@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7644594091187270355}
   - component: {fileID: 1705558134591774445}
   - component: {fileID: 1636269157152266446}
+  - component: {fileID: -6082435477813489473}
   - component: {fileID: -8779228769961057010}
   m_Layer: 3
   m_Name: S3SmallGroundEnemy 2
@@ -188,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 100
+  enemyDamage: 20
 --- !u!114 &1636269157152266446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +202,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ba86d4c6e71754395a1a3966b29eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6082435477813489473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307172693211356186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4fa87c209280b4188ef94e3d1cc444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameArray: []
 --- !u!114 &-8779228769961057010
 MonoBehaviour:
   m_ObjectHideFlags: 0

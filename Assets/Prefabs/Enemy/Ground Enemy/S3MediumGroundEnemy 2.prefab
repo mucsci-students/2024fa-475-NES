@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7036478671428776277}
   - component: {fileID: 7127650829391083295}
   - component: {fileID: 3253835422888465225}
+  - component: {fileID: 3160197662875971109}
   m_Layer: 3
   m_Name: S3MediumGroundEnemy 2
   m_TagString: Enemy
@@ -188,6 +189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 150
+  enemyDamage: 20
 --- !u!114 &7127650829391083295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,3 +215,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameObject: {fileID: 5493241046746051457}
+--- !u!114 &3160197662875971109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5493241046746051457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4fa87c209280b4188ef94e3d1cc444, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frameArray: []
