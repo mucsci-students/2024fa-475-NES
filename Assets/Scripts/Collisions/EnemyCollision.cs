@@ -6,6 +6,7 @@ public class EnemyCollision : MonoBehaviour
 {
     GameObject gun;
     GameObject player;
+    GameObject enemy;
 
     void Start()
     {
@@ -64,7 +65,9 @@ public class EnemyCollision : MonoBehaviour
             int playerHealth = PlayerPrefs.GetInt("PlayerHealth");
             int playerVehicleLevel = PlayerPrefs.GetInt("PlayerVehicleLevel");
             int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
-            int damage = 10 / (playerVehicleLevel / currentLevel);
+            EnemyStat enemyStat = gameObject.GetComponent<EnemyStat>();
+            //enemyStat.SetEnemyDamage(10 / playerVehicleLevel);
+            int damage = enemyStat.GetEnemyDamage();
             if (playerArmor >= damage)
             {
                 playerArmor -= damage;

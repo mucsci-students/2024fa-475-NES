@@ -19,4 +19,9 @@ public class GroundEnemyMovements : MonoBehaviour
             transform.Translate(Vector3.left * groundEnemySpeed * Time.fixedDeltaTime);
         }
     }
+
+    public void SetGroundEnemySpeed(float newSpeed)
+    {
+        groundEnemySpeed = newSpeed;
+    }
 }

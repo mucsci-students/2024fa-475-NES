@@ -58,4 +58,9 @@ public class AirEnemyMovements : MonoBehaviour
             targetPosition = player.transform.position;
         }
     }
+
+    public void SetAirEnemySpeed(float newSpeed)
+    {
+        airEnemySpeed = newSpeed;
+    }
 }

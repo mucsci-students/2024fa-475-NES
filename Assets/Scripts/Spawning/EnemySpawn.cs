@@ -11,6 +11,10 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] float timeDelay = 8f; // Time delay between spawning waves
     [SerializeField] int firstEnemyNum = 0;
     [SerializeField] int secondEnemyNum = 0;
+    [SerializeField] float enemyHealth = 100f;
+    [SerializeField] int enemyDamage = 10;
+    [SerializeField] float enemySpeed = 1;
+
 
     void Start()
     {
@@ -18,6 +22,7 @@ public class EnemySpawn : MonoBehaviour
         // Start the coroutine to continuously spawn enemies every `timeDelay` seconds
         StartCoroutine(SpawnEnemiesContinuously(timeDelay));
     }
+
     IEnumerator SpawnEnemiesContinuously(float delay)
     {
         // Infinite loop to continuously spawn enemies
@@ -34,17 +39,40 @@ public class EnemySpawn : MonoBehaviour
     {
         foreach (GameObject enemyPrefab in enemyPrefabs)
         {
-            // Generate a random number between 3 and 5 (inclusive)
+            // Generate a random number between firstEnemyNum and secondEnemyNum
             int enemyCount = Random.Range(firstEnemyNum, secondEnemyNum);
 
             // Spawn the specified number of enemies of this type
             for (int i = 0; i < enemyCount; i++)
             {
                 Vector2 randomPosition = GetRandomSpawnPosition();
-                Instantiate(enemyPrefab, randomPosition, Quaternion.identity);
+                GameObject spawnedEnemy = Instantiate(enemyPrefab, randomPosition, Quaternion.identity);
+
+                // Now modify the stats of the spawned enemy
+                EnemyStat enemyStat = spawnedEnemy.GetComponent<EnemyStat>();
+                if (enemyStat != null)
+                {
+                    enemyStat.SetEnemyHealth(enemyHealth);
+                    enemyStat.SetEnemyDamage(enemyDamage);
+                }
+
+                // Handle ground and air enemy movement speeds
+                GroundEnemyMovements groundEnemyMovement = spawnedEnemy.GetComponent<GroundEnemyMovements>();
+                AirEnemyMovements airEnemyMovements = spawnedEnemy.GetComponent<AirEnemyMovements>();
+
+                if (groundEnemyMovement != null)
+                {
+                    groundEnemyMovement.SetGroundEnemySpeed(enemySpeed);
+                }
+
+                if (airEnemyMovements != null)
+                {
+                    airEnemyMovements.SetAirEnemySpeed(enemySpeed);
+                }
             }
         }
     }
+
 
     Vector2 GetRandomSpawnPosition()
     {
