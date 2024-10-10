@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 770936074294988220}
   - component: {fileID: 5491842718506562162}
   - component: {fileID: 2530410070650584874}
+  - component: {fileID: 1878912336839060003}
   m_Layer: 3
   m_Name: S1SmallAirEnemy 3
   m_TagString: Enemy
@@ -230,3 +231,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frameArray: []
+--- !u!114 &1878912336839060003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277599851821211214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21925c69dc736e0418431bd948012ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 7277599851821211214}

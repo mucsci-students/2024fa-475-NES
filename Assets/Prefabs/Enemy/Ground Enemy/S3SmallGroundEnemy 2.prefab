@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1636269157152266446}
   - component: {fileID: -6082435477813489473}
   - component: {fileID: -8779228769961057010}
+  - component: {fileID: 3659942588871584816}
   m_Layer: 3
   m_Name: S3SmallGroundEnemy 2
   m_TagString: Enemy
@@ -228,3 +229,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameObject: {fileID: 307172693211356186}
+--- !u!114 &3659942588871584816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307172693211356186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21925c69dc736e0418431bd948012ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 307172693211356186}
