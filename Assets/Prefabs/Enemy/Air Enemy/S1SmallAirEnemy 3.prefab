@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 770936074294988220}
   - component: {fileID: 5491842718506562162}
   - component: {fileID: 2530410070650584874}
-  - component: {fileID: 1878912336839060003}
+  - component: {fileID: -2231036342234793184}
   m_Layer: 3
   m_Name: S1SmallAirEnemy 3
   m_TagString: Enemy
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frameArray: []
---- !u!114 &1878912336839060003
+--- !u!114 &-2231036342234793184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

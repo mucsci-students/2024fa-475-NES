@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1064951128789831548}
   - component: {fileID: -3598677921549900577}
   - component: {fileID: -1952742723657275804}
-  - component: {fileID: 3337408018491238323}
+  - component: {fileID: -7891363831973511748}
   m_Layer: 3
   m_Name: S1MediumAirEnemy
   m_TagString: Enemy
@@ -243,7 +243,7 @@ MonoBehaviour:
   - {fileID: -1539873834, guid: 4298177ea41c20a408f5a645fb50da4d, type: 3}
   - {fileID: 1324209981, guid: 4298177ea41c20a408f5a645fb50da4d, type: 3}
   - {fileID: -809920444, guid: 4298177ea41c20a408f5a645fb50da4d, type: 3}
---- !u!114 &3337408018491238323
+--- !u!114 &-7891363831973511748
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

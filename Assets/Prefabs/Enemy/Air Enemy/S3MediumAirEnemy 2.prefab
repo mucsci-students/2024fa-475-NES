@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1064951128789831548}
   - component: {fileID: 3215151643446188935}
   - component: {fileID: 241669095763974314}
-  - component: {fileID: 6745620781036111482}
+  - component: {fileID: 4470179337715230664}
   m_Layer: 3
   m_Name: S3MediumAirEnemy 2
   m_TagString: Enemy
@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frameArray: []
---- !u!114 &6745620781036111482
+--- !u!114 &4470179337715230664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
