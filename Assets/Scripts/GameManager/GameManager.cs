@@ -176,13 +176,16 @@ public class GameManager : MonoBehaviour
 
                 } else {
                     // Instructions Menu UI (you can add more instructions here as needed)
-                    GUI.Label(new Rect(centerX - 15, centerY - 100, buttonWidth + 50, buttonHeight), "Instructions", titleStyle);
-                    GUI.Label(new Rect(centerX - 15, centerY - 60, buttonWidth + 50, buttonHeight), "You have to save your family by finding the cure.");
-                    GUI.Label(new Rect(centerX - 15, centerY - 20, buttonWidth + 50, buttonHeight), "Get through all the levels to find it.");
-                    GUI.Label(new Rect(centerX - 15, centerY + 20, buttonWidth + 50, buttonHeight), "Get money by killing zombies and upgrade your equipment.");
+                    GUI.Label(new Rect(centerX - 15, centerY - 200, buttonWidth + 100, buttonHeight), "Instructions", titleStyle);
+                    GUI.Box(new Rect(centerX - 200, centerY - 150, buttonWidth + 400, buttonHeight), "You have to save your family by finding the cure.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 200, centerY - 100, buttonWidth + 400, buttonHeight), "Get through all the levels to find it.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 200, centerY - 50, buttonWidth + 400, buttonHeight), "Get money by killing zombies and upgrade your equipment.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 200, centerY, buttonWidth + 400, buttonHeight), "You can earn up to 3 weapon/vehicle upgrades per level.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 200, centerY + 50, buttonWidth + 400, buttonHeight), "You can only upgrade your armor to 100.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 200, centerY + 100, buttonWidth + 400, buttonHeight), "Upgrades cost $100", buttonStyle);
 
                     // Back Button
-                    if (GUI.Button(new Rect(centerX, centerY + 60, buttonWidth, buttonHeight), "Back", buttonStyle))
+                    if (GUI.Button(new Rect(centerX, centerY + 200, buttonWidth, buttonHeight), "Back", buttonStyle))
                     {
                         // Return to the options menu
                         showInstructions = false;
