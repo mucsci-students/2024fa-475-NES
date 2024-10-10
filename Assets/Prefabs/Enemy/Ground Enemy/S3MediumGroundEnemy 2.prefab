@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 7127650829391083295}
   - component: {fileID: 3253835422888465225}
   - component: {fileID: 3160197662875971109}
+  - component: {fileID: 164621677424289}
+  - component: {fileID: 1104243632290945081}
   m_Layer: 3
   m_Name: S3MediumGroundEnemy 2
   m_TagString: Enemy

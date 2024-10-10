@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: -7312221647746507734}
   - component: {fileID: 7127650829391083295}
   - component: {fileID: -8541809112994218850}
+  - component: {fileID: 6152496534989694395}
+  - component: {fileID: -872868030590726591}
   m_Layer: 3
   m_Name: S4MediumGroundEnemy 3
   m_TagString: Enemy
@@ -308,3 +310,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameObject: {fileID: 5493241046746051457}
+--- !u!114 &6152496534989694395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5493241046746051457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21925c69dc736e0418431bd948012ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 5493241046746051457}
+--- !u!114 &-872868030590726591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5493241046746051457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21925c69dc736e0418431bd948012ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 5493241046746051457}

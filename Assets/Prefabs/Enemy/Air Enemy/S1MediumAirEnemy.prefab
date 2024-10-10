@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1064951128789831548}
   - component: {fileID: -3598677921549900577}
   - component: {fileID: -1952742723657275804}
+  - component: {fileID: -7891363831973511748}
   m_Layer: 3
   m_Name: S1MediumAirEnemy
   m_TagString: Enemy

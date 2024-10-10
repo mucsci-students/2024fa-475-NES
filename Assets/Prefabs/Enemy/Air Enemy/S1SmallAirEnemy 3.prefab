@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 770936074294988220}
   - component: {fileID: 5491842718506562162}
   - component: {fileID: 2530410070650584874}
+  - component: {fileID: -2231036342234793184}
   m_Layer: 3
   m_Name: S1SmallAirEnemy 3
   m_TagString: Enemy
@@ -310,3 +311,4 @@ MonoBehaviour:
   - {fileID: -1539873834, guid: 4298177ea41c20a408f5a645fb50da4d, type: 3}
   - {fileID: 1324209981, guid: 4298177ea41c20a408f5a645fb50da4d, type: 3}
   - {fileID: -809920444, guid: 4298177ea41c20a408f5a645fb50da4d, type: 3}
+ 

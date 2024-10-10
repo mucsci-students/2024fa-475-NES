@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 1636269157152266446}
   - component: {fileID: 8075795207785609579}
   - component: {fileID: -422139709372514447}
+  - component: {fileID: 4785186802506423549}
+  - component: {fileID: -1662994179368229750}
   m_Layer: 3
   m_Name: S2SmallGroundEnemy
   m_TagString: Enemy
