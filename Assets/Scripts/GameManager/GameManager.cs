@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private int playerArmorLevel;
     private int volumeVal;
     private int currentLevel;
+    public Font customFont;
 
 
     // Create a custom GUIStyle for the game name
@@ -46,13 +47,18 @@ public class GameManager : MonoBehaviour
         titleStyle.fontSize = 30;  // Adjust the size as needed
         titleStyle.normal.textColor = Color.white; // Change the color as needed
         titleStyle.fontStyle = FontStyle.Bold; // Bold text
+        if (customFont != null) {
+            titleStyle.font = customFont;
+        }
         titleStyle.alignment = TextAnchor.MiddleCenter; // Center the text
 
         // Create a custom GUIStyle for the buttons
         buttonStyle = new GUIStyle("button");
         buttonStyle.fontSize = 20;  // Adjust the size as needed
         buttonStyle.normal.textColor = Color.white; // Change the color as needed
-        buttonStyle.fontStyle = FontStyle.Bold; // Bold text
+        if (customFont != null) {
+            buttonStyle.font = customFont;
+        }
         buttonStyle.alignment = TextAnchor.MiddleCenter; // Center the text
         
         // Create a brown Texture2D for the button background
@@ -146,7 +152,7 @@ public class GameManager : MonoBehaviour
                     }
 
                     // Instructions Button
-                    if (GUI.Button(new Rect(centerX, centerY + 10, buttonWidth, buttonHeight), "Instructions", buttonStyle))
+                    if (GUI.Button(new Rect(centerX - 25, centerY + 10, buttonWidth + 50, buttonHeight), "Instructions", buttonStyle))
                     {
                         // Show instructions
                         showInstructions = true;
@@ -157,7 +163,7 @@ public class GameManager : MonoBehaviour
                     volumeVal = (int)GUI.HorizontalSlider(new Rect(centerX, centerY + 70, buttonWidth, buttonHeight), (float)volumeVal, 0.0f, 100.0f);
 
                     // Reset Stats Button
-                    if (GUI.Button(new Rect(centerX, centerY + 130, buttonWidth, buttonHeight), "Reset Stats", buttonStyle))
+                    if (GUI.Button(new Rect(centerX - 25, centerY + 130, buttonWidth + 50, buttonHeight), "Reset Stats", buttonStyle))
                     {
                         // Reset player stats
                         PlayerPrefs.SetInt("PlayerHealth", 100);
@@ -176,13 +182,13 @@ public class GameManager : MonoBehaviour
 
                 } else {
                     // Instructions Menu UI (you can add more instructions here as needed)
-                    GUI.Label(new Rect(centerX - 15, centerY - 200, buttonWidth + 100, buttonHeight), "Instructions", titleStyle);
-                    GUI.Box(new Rect(centerX - 200, centerY - 150, buttonWidth + 400, buttonHeight), "You have to save your family by finding the cure.", buttonStyle);
-                    GUI.Box(new Rect(centerX - 200, centerY - 100, buttonWidth + 400, buttonHeight), "Get through all the levels to find it.", buttonStyle);
-                    GUI.Box(new Rect(centerX - 200, centerY - 50, buttonWidth + 400, buttonHeight), "Get money by killing zombies and upgrade your equipment.", buttonStyle);
-                    GUI.Box(new Rect(centerX - 200, centerY, buttonWidth + 400, buttonHeight), "You can earn up to 3 weapon/vehicle upgrades per level.", buttonStyle);
-                    GUI.Box(new Rect(centerX - 200, centerY + 50, buttonWidth + 400, buttonHeight), "You can only upgrade your armor to 100.", buttonStyle);
-                    GUI.Box(new Rect(centerX - 200, centerY + 100, buttonWidth + 400, buttonHeight), "Upgrades cost $100", buttonStyle);
+                    GUI.Label(new Rect(centerX - 40, centerY - 200, buttonWidth + 100, buttonHeight), "Instructions", titleStyle);
+                    GUI.Box(new Rect(centerX - 475, centerY - 150, buttonWidth + 950, buttonHeight), "You have to save your family by finding the cure.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 475, centerY - 100, buttonWidth + 950, buttonHeight), "Get through all the levels to find it.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 475, centerY - 50, buttonWidth + 950, buttonHeight), "Get money by killing zombies and upgrade your equipment.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 475, centerY, buttonWidth + 950, buttonHeight), "You can earn up to 3 weapon/vehicle upgrades per level.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 475, centerY + 50, buttonWidth + 950, buttonHeight), "You can only upgrade your armor to 100.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 475, centerY + 100, buttonWidth + 950, buttonHeight), "Upgrades cost $100", buttonStyle);
 
                     // Back Button
                     if (GUI.Button(new Rect(centerX, centerY + 200, buttonWidth, buttonHeight), "Back", buttonStyle))
@@ -199,7 +205,7 @@ public class GameManager : MonoBehaviour
             if (PlayerPrefs.GetInt("CurrentLevelFinished") == 0) {
                 if (!gamePause) {
                     // show a pause button in the top right corner
-                    if (GUI.Button(new Rect(Screen.width - 100, 10, 90, 40), "Pause", buttonStyle)) {
+                    if (GUI.Button(new Rect(Screen.width - 150, 10, 115, 40), "Pause", buttonStyle)) {
                         // Pause the game
                         Time.timeScale = 0;
                         PlayerPrefs.SetInt("GamePaused", 1);
@@ -207,7 +213,7 @@ public class GameManager : MonoBehaviour
                     }
 
                     // show level up buttons for weapon, vehicle, and armor
-                    if (GUI.Button(new Rect(25, Screen.height - 50, 200, 40), "Level Up Weapon", buttonStyle)) {
+                    if (GUI.Button(new Rect(10, Screen.height - 50, 400, 40), "Level Up Weapon", buttonStyle)) {
                         // Level up the weapon
                         if (playerWeaponLevel < currentLevel * 3) {
                             if (playerMoney >= 100) {
@@ -216,7 +222,7 @@ public class GameManager : MonoBehaviour
                             }
                         }
                     }
-                    if (GUI.Button(new Rect(275, Screen.height - 50, 200, 40), "Level Up Vehicle", buttonStyle)) {
+                    if (GUI.Button(new Rect(420, Screen.height - 50, 400, 40), "Level Up Vehicle", buttonStyle)) {
                         // Level up the vehicle
                         if (playerVehicleLevel < currentLevel * 3) {
                             if (playerMoney >= 100) {
@@ -225,7 +231,7 @@ public class GameManager : MonoBehaviour
                             }
                         }
                     }
-                    if (GUI.Button(new Rect(525, Screen.height - 50, 200, 40), "Level Up Armor", buttonStyle)) {
+                    if (GUI.Button(new Rect(830, Screen.height - 50, 400, 40), "Level Up Armor", buttonStyle)) {
                         // Level up the armor
                         if (playerMoney >= 100 && PlayerPrefs.GetInt("PlayerArmor") < 100) {
                             PlayerPrefs.SetInt("PlayerMoney", PlayerPrefs.GetInt("PlayerMoney") - 100);
@@ -276,42 +282,44 @@ public class GameManager : MonoBehaviour
                         }
                     } else {
                         if (!showInstructions) {
-                            // Options Menu UI (you can add more options here as needed)
-                            GUI.Label(new Rect(centerX - 15, centerY - 100, buttonWidth + 50, buttonHeight), "Options Menu", titleStyle);
+                    // Options Menu UI (you can add more options here as needed)
+                    GUI.Label(new Rect(centerX - 15, centerY - 100, buttonWidth + 50, buttonHeight), "Options Menu", titleStyle);
 
-                            // Back Button
-                            if (GUI.Button(new Rect(centerX, centerY - 50, buttonWidth, buttonHeight), "Back", buttonStyle))
-                            {
-                                // Return to the main menu
-                                showOptions = false;
-                            }
+                    // Back Button
+                    if (GUI.Button(new Rect(centerX, centerY - 50, buttonWidth, buttonHeight), "Back", buttonStyle))
+                    {
+                        // Return to the main menu
+                        showOptions = false;
+                    }
 
-                            // Instructions Button
-                            if (GUI.Button(new Rect(centerX, centerY + 10, buttonWidth, buttonHeight), "Instructions", buttonStyle))
-                            {
-                                // Show instructions
-                                showInstructions = true;
-                            }
+                    // Instructions Button
+                    if (GUI.Button(new Rect(centerX - 25, centerY + 10, buttonWidth + 50, buttonHeight), "Instructions", buttonStyle))
+                    {
+                        // Show instructions
+                        showInstructions = true;
+                    }
 
-                            // Volume Label
-                            GUI.Label(new Rect(centerX - 50, centerY + 65, buttonWidth + 50, buttonHeight), "Volume");
-                            // Volume Slider
-                            volumeVal = (int)GUI.HorizontalSlider(new Rect(centerX, centerY + 70, buttonWidth, buttonHeight), (float)volumeVal, 0.0f, 100.0f);
+                    GUI.Label(new Rect(centerX - 50, centerY + 65, buttonWidth + 50, buttonHeight), "Volume");
+                    // Volume Slider
+                    volumeVal = (int)GUI.HorizontalSlider(new Rect(centerX, centerY + 70, buttonWidth, buttonHeight), (float)volumeVal, 0.0f, 100.0f);
 
-                        } else {
-                            // Instructions Menu UI (you can add more instructions here as needed)
-                            GUI.Label(new Rect(centerX - 15, centerY - 100, buttonWidth + 50, buttonHeight), "Instructions", titleStyle);
-                            GUI.Label(new Rect(centerX - 15, centerY - 60, buttonWidth + 50, buttonHeight), "You have to save your family by finding the cure.");
-                            GUI.Label(new Rect(centerX - 15, centerY - 20, buttonWidth + 50, buttonHeight), "Get through all the levels to find it.");
-                            GUI.Label(new Rect(centerX - 15, centerY + 20, buttonWidth + 50, buttonHeight), "Get money by killing zombies and upgrade your equipment.");
+                } else {
+                    // Instructions Menu UI (you can add more instructions here as needed)
+                    GUI.Label(new Rect(centerX - 40, centerY - 200, buttonWidth + 100, buttonHeight), "Instructions", titleStyle);
+                    GUI.Box(new Rect(centerX - 475, centerY - 150, buttonWidth + 950, buttonHeight), "You have to save your family by finding the cure.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 475, centerY - 100, buttonWidth + 950, buttonHeight), "Get through all the levels to find it.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 475, centerY - 50, buttonWidth + 950, buttonHeight), "Get money by killing zombies and upgrade your equipment.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 475, centerY, buttonWidth + 950, buttonHeight), "You can earn up to 3 weapon/vehicle upgrades per level.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 475, centerY + 50, buttonWidth + 950, buttonHeight), "You can only upgrade your armor to 100.", buttonStyle);
+                    GUI.Box(new Rect(centerX - 475, centerY + 100, buttonWidth + 950, buttonHeight), "Upgrades cost $100", buttonStyle);
 
-                            // Back Button
-                            if (GUI.Button(new Rect(centerX, centerY + 60, buttonWidth, buttonHeight), "Back", buttonStyle))
-                            {
-                                // Return to the options menu
-                                showInstructions = false;
-                            }
-                        }
+                    // Back Button
+                    if (GUI.Button(new Rect(centerX, centerY + 200, buttonWidth, buttonHeight), "Back", buttonStyle))
+                    {
+                        // Return to the options menu
+                        showInstructions = false;
+                    }
+                }
                     }
                 }
             } else {
@@ -332,7 +340,7 @@ public class GameManager : MonoBehaviour
             // Level Select UI
             // Display the level select UI here
             // Level 1 Button
-            if (GUI.Button(new Rect(0, centerY + 50, 90, 40), "Level 1", buttonStyle))
+            if (GUI.Button(new Rect(35, centerY + 50, 150, 40), "Level 1", buttonStyle))
             {
                 PlayerPrefs.SetInt("CurrentLevel", 1);
                 // Load the Level1 scene
@@ -346,7 +354,7 @@ public class GameManager : MonoBehaviour
                 display = "Locked";
             }
             // Level 2 Button
-            if (GUI.Button(new Rect((Screen.width / 6), centerY - 50, 90, 40), display, buttonStyle))
+            if (GUI.Button(new Rect(35 + (Screen.width / 6), centerY - 50, 150, 40), display, buttonStyle))
             {
                 if (PlayerPrefs.GetInt("Level1Complete") == 1) {
                     PlayerPrefs.SetInt("CurrentLevel", 2);
@@ -362,7 +370,7 @@ public class GameManager : MonoBehaviour
                 display2 = "Locked";
             }
             // Level 3 Button
-            if (GUI.Button(new Rect((Screen.width / 6) * 2, centerY + 50, 90, 40), display2, buttonStyle))
+            if (GUI.Button(new Rect(35 + (Screen.width / 6) * 2, centerY + 50, 150, 40), display2, buttonStyle))
             {
                 if (PlayerPrefs.GetInt("Level2Complete") == 1) {
                     PlayerPrefs.SetInt("CurrentLevel", 3);
@@ -378,7 +386,7 @@ public class GameManager : MonoBehaviour
                 display3 = "Locked";
             }
             // Level 4 Button
-            if (GUI.Button(new Rect((Screen.width / 6) * 3, centerY - 50, 90, 40), display3, buttonStyle))
+            if (GUI.Button(new Rect(35 + (Screen.width / 6) * 3, centerY - 50, 150, 40), display3, buttonStyle))
             {
                 if (PlayerPrefs.GetInt("Level3Complete") == 1) {
                     PlayerPrefs.SetInt("CurrentLevel", 4);
@@ -394,7 +402,7 @@ public class GameManager : MonoBehaviour
                 display4 = "Locked";
             }
             // Level 5 Button
-            if (GUI.Button(new Rect((Screen.width / 6) * 4, centerY + 50, 90, 40), display4, buttonStyle))
+            if (GUI.Button(new Rect(35 + (Screen.width / 6) * 4, centerY + 50, 150, 40), display4, buttonStyle))
             {
                 if (PlayerPrefs.GetInt("Level4Complete") == 1) {
                     PlayerPrefs.SetInt("CurrentLevel", 5);
@@ -410,7 +418,7 @@ public class GameManager : MonoBehaviour
                 display5 = "Locked";
             }
             // Level 6 Button
-            if (GUI.Button(new Rect((Screen.width / 6) * 5, centerY - 50, 90, 40), display5, buttonStyle))
+            if (GUI.Button(new Rect(35 + (Screen.width / 6) * 5, centerY - 50, 150, 40), display5, buttonStyle))
             {
                 if (PlayerPrefs.GetInt("Level5Complete") == 1) {
                     PlayerPrefs.SetInt("CurrentLevel", 6);
