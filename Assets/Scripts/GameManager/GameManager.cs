@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     // Create a custom GUIStyle for the game name
     private GUIStyle titleStyle;
     private GUIStyle buttonStyle;
+    private GUIStyle labelStyle;
 
     // Start is called before the first frame update
     void Start()
@@ -75,6 +76,21 @@ public class GameManager : MonoBehaviour
         buttonStyle.normal.textColor = new Color(0.0f, 0.5f, 0.0f); // Dark Green color for text
         buttonStyle.hover.textColor = new Color(0.0f, 0.5f, 0.0f);  // Keep green text on hover
         buttonStyle.active.textColor = new Color(0.0f, 0.5f, 0.0f); // Keep green text on click
+
+        // Create a custom GUIStyle for the labels
+        labelStyle = new GUIStyle();
+        labelStyle.font = customFont;
+
+        // Assign the brown background texture to the button style
+        labelStyle.normal.background = brownBackground;
+        labelStyle.hover.background = brownBackground;
+        labelStyle.active.background = brownBackground;
+
+        // Set the text color to green
+        labelStyle.normal.textColor = new Color(0.0f, 0.5f, 0.0f); // Dark Green color for text
+        labelStyle.hover.textColor = new Color(0.0f, 0.5f, 0.0f);  // Keep green text on hover
+        labelStyle.active.textColor = new Color(0.0f, 0.5f, 0.0f); // Keep green text on click
+        
     }
 
     // Update is called once per frame
@@ -243,11 +259,20 @@ public class GameManager : MonoBehaviour
                     }
 
                     // Display the player's health, armor, and money
-                    GUI.Label(new Rect(10, 10, 200, 20), "Health: " + PlayerPrefs.GetInt("PlayerHealth"));
-                    GUI.Label(new Rect(10, 30, 200, 20), "Armor: " + PlayerPrefs.GetInt("PlayerArmor"));
-                    GUI.Label(new Rect(10, 50, 200, 20), "Money: " + PlayerPrefs.GetInt("PlayerMoney"));
-                    GUI.Label(new Rect(10, 70, 200, 20), "Weapon Level: " + PlayerPrefs.GetInt("PlayerWeaponLevel"));
-                    GUI.Label(new Rect(10, 90, 200, 20), "Vehicle Level: " + PlayerPrefs.GetInt("PlayerVehicleLevel"));
+                    GUI.Box(new Rect(10, 10, 400, 30), "Health: " + PlayerPrefs.GetInt("PlayerHealth"), labelStyle);
+                    GUI.Box(new Rect(10, 40, 400, 30), "Armor: " + PlayerPrefs.GetInt("PlayerArmor"), labelStyle);
+                    GUI.Box(new Rect(10, 70, 400, 30), "Money: " + PlayerPrefs.GetInt("PlayerMoney"), labelStyle);
+                    int maxLevel = currentLevel * 3;
+                    if (PlayerPrefs.GetInt("PlayerWeaponLevel") < maxLevel) {
+                        GUI.Box(new Rect(10, 100, 400, 30), "Weapon Level: " + PlayerPrefs.GetInt("PlayerWeaponLevel"), labelStyle);
+                    } else {
+                        GUI.Box(new Rect(10, 100, 400, 30), "Weapon Level: " + PlayerPrefs.GetInt("PlayerWeaponLevel") + " (Max)", labelStyle);
+                    }
+                    if (PlayerPrefs.GetInt("PlayerVehicleLevel") < maxLevel) {
+                        GUI.Box(new Rect(10, 130, 400, 30), "Vehicle Level: " + PlayerPrefs.GetInt("PlayerVehicleLevel"), labelStyle);
+                    } else {
+                        GUI.Box(new Rect(10, 130, 400, 30), "Vehicle Level: " + PlayerPrefs.GetInt("PlayerVehicleLevel") + " (Max)", labelStyle);
+                    }
 
                 } else {
                     if(!showOptions) {
@@ -264,7 +289,7 @@ public class GameManager : MonoBehaviour
                         }
 
                         // Exit Level Button
-                        if (GUI.Button(new Rect(centerX, centerY + 60, buttonWidth, buttonHeight), "Exit Level", buttonStyle))
+                        if (GUI.Button(new Rect(centerX - 25, centerY + 60, buttonWidth + 50, buttonHeight), "Exit Level", buttonStyle))
                         {
                             // Return to the LevelSelect scene
                             Time.timeScale = 1;
@@ -473,7 +498,7 @@ public class GameManager : MonoBehaviour
             }
 
             // StartMenu Button
-            if (GUI.Button(new Rect(centerX, centerY + 60, buttonWidth, buttonHeight), "Start Menu", buttonStyle))
+            if (GUI.Button(new Rect(centerX - 10, centerY + 60, buttonWidth + 20, buttonHeight), "Start Menu", buttonStyle))
             {
                 // Load the StartMenu scene
                 UnityEngine.SceneManagement.SceneManager.LoadScene("StartMenu");
