@@ -1539,6 +1539,50 @@ PrefabInstance:
       propertyPath: timeDelay
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 4441979445924690721, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: firstAirRayAngle
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441979445924690721, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: sixthAirRayAngle
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441979445924690721, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: secondAirRayAngle
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441979445924690721, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: seventhAirRayAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441979445924690721, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: fifthAirRayDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441979445924690721, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: firstAirRayDistance
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441979445924690721, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: sixthAirRayDistance
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441979445924690721, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: thirdAirRayDistance
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441979445924690721, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: fourthAirRayDistance
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441979445924690721, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: secondAirRayDistance
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4441979445924690721, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: seventhAirRayDistance
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 4456662215480161938, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_Name
       value: PlayerSetup
