@@ -252,6 +252,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &334572543 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6684975870480272910, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+  m_PrefabInstance: {fileID: 2419800983491070621}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &345383864
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +564,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5568584169968201222, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
   m_PrefabInstance: {fileID: 2419800983491070621}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &534375224
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334572543}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5bb916a04a4f58346bcc3b1bc350be05, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,6 +1389,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 116436376734613014, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 719414043530750300, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_Size.x
+      value: 8.9696045
+      objectReference: {fileID: 0}
+    - target: {fileID: 719414043530750300, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.84524536
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568054920925578884, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.553
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568054920925578884, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.307
+      objectReference: {fileID: 0}
+    - target: {fileID: 1652239640526160710, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_Name
+      value: BulletSpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850503115359242674, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.09375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850503115359242674, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.09375
+      objectReference: {fileID: 0}
     - target: {fileID: 3056671673410238915, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -175.5
@@ -1407,10 +1465,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSetup
       objectReference: {fileID: 0}
+    - target: {fileID: 8146396246138888512, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8797524448918227986, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 441651117, guid: 123b31c90593adb4f91a0d4a8803def4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6684975870480272910, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 534375224}
     - targetCorrespondingSourceObject: {fileID: 8146396246138888512, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1828193856}
