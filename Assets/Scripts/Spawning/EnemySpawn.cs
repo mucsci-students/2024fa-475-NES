@@ -11,9 +11,12 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] float timeDelay = 8f; // Time delay between spawning waves
     [SerializeField] int firstEnemyNum = 0;
     [SerializeField] int secondEnemyNum = 0;
-    [SerializeField] float enemyHealth = 100f;
-    [SerializeField] int enemyDamage = 10;
-    [SerializeField] float enemySpeed = 1;
+    [SerializeField] float smallEnemyHealth = 100f;
+    [SerializeField] float mediumEnemyHealth = 100f;
+    [SerializeField] float smallEnemySpeed = 1;
+    [SerializeField] float mediumEnemySpeed = 1;
+    [SerializeField] int smallEnemyDamage = 10;
+    [SerializeField] int mediumEnemyDamage = 10;
 
 
     void Start()
@@ -48,30 +51,54 @@ public class EnemySpawn : MonoBehaviour
                 Vector2 randomPosition = GetRandomSpawnPosition();
                 GameObject spawnedEnemy = Instantiate(enemyPrefab, randomPosition, Quaternion.identity);
 
-                // Now modify the stats of the spawned enemy
+                // Now modify the stats of the spawned enemy based on its tag
                 EnemyStat enemyStat = spawnedEnemy.GetComponent<EnemyStat>();
+
                 if (enemyStat != null)
                 {
-                    enemyStat.SetEnemyHealth(enemyHealth);
-                    enemyStat.SetEnemyDamage(enemyDamage);
+                    // Check the enemy tag and apply the appropriate stats
+                    if (spawnedEnemy.CompareTag("SmallEnemy"))
+                    {
+                        enemyStat.SetEnemyHealth(smallEnemyHealth);
+                        enemyStat.SetEnemyDamage(smallEnemyDamage);
+                    }
+                    else if (spawnedEnemy.CompareTag("MediumEnemy"))
+                    {
+                        enemyStat.SetEnemyHealth(mediumEnemyHealth);
+                        enemyStat.SetEnemyDamage(mediumEnemyDamage);
+                    }
                 }
 
-                // Handle ground and air enemy movement speeds
+                // Handle ground and air enemy movement speeds based on tag
                 GroundEnemyMovements groundEnemyMovement = spawnedEnemy.GetComponent<GroundEnemyMovements>();
                 AirEnemyMovements airEnemyMovements = spawnedEnemy.GetComponent<AirEnemyMovements>();
 
-                if (groundEnemyMovement != null)
+                if (spawnedEnemy.CompareTag("SmallEnemy"))
                 {
-                    groundEnemyMovement.SetGroundEnemySpeed(enemySpeed);
+                    if (groundEnemyMovement != null)
+                    {
+                        groundEnemyMovement.SetGroundEnemySpeed(smallEnemySpeed);
+                    }
+                    if (airEnemyMovements != null)
+                    {
+                        airEnemyMovements.SetAirEnemySpeed(smallEnemySpeed);
+                    }
                 }
-
-                if (airEnemyMovements != null)
+                else if (spawnedEnemy.CompareTag("MediumEnemy"))
                 {
-                    airEnemyMovements.SetAirEnemySpeed(enemySpeed);
+                    if (groundEnemyMovement != null)
+                    {
+                        groundEnemyMovement.SetGroundEnemySpeed(mediumEnemySpeed);
+                    }
+                    if (airEnemyMovements != null)
+                    {
+                        airEnemyMovements.SetAirEnemySpeed(mediumEnemySpeed);
+                    }
                 }
             }
         }
     }
+
 
 
     Vector2 GetRandomSpawnPosition()

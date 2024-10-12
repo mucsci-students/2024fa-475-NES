@@ -17,9 +17,10 @@ GameObject:
   - component: {fileID: 1064951128789831548}
   - component: {fileID: -3598677921549900577}
   - component: {fileID: -1952742723657275804}
+  - component: {fileID: 7825126958086940955}
   m_Layer: 3
   m_Name: S1MediumAirEnemy
-  m_TagString: Enemy
+  m_TagString: MediumEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,8 +203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   airEnemySpeed: 0.5
-  strikeSpeed: 1.5
-  straightDuration: 3.5
+  strikeSpeed: 2
+  straightDuration: 2
 --- !u!114 &-3598677921549900577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +225,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4909273443495790074}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c4fa87c209280b4188ef94e3d1cc444, type: 3}
   m_Name: 
@@ -310,3 +311,24 @@ MonoBehaviour:
   - {fileID: -1539873834, guid: 4298177ea41c20a408f5a645fb50da4d, type: 3}
   - {fileID: 1324209981, guid: 4298177ea41c20a408f5a645fb50da4d, type: 3}
   - {fileID: -809920444, guid: 4298177ea41c20a408f5a645fb50da4d, type: 3}
+--- !u!95 &7825126958086940955
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909273443495790074}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

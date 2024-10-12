@@ -18,8 +18,11 @@ public class EnemyCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log($"Collision detected with: {collision.gameObject.tag}");
+
         if (collision.gameObject.tag == "Bullet")
         {
+            Debug.Log("Collided with object tagged: " + collision.gameObject.tag);
             EnemyStat enemyStat = gameObject.GetComponent<EnemyStat>();
             GunStat gunStat = gun.GetComponent<GunStat>();
             PlayerShooting playerShooting = player.GetComponent<PlayerShooting>();
@@ -68,6 +71,7 @@ public class EnemyCollision : MonoBehaviour
             EnemyStat enemyStat = gameObject.GetComponent<EnemyStat>();
             //enemyStat.SetEnemyDamage(10 / playerVehicleLevel);
             int damage = enemyStat.GetEnemyDamage();
+
             if (playerArmor >= damage)
             {
                 playerArmor -= damage;
