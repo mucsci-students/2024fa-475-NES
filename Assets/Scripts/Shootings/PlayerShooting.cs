@@ -9,6 +9,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] Transform gunTransform;
     [SerializeField] GameObject gun;
     [SerializeField] LayerMask enemyLayerMask; // LayerMask for enemies only
+    [SerializeField] GameObject player;
 
     [SerializeField] float firstAirRayDistance = 35f;
     [SerializeField] float secondAirRayDistance = 40f;
@@ -126,6 +127,7 @@ public class PlayerShooting : MonoBehaviour
     void RaycastDetection()
     {
         RaycastHit2D hit;
+        Animator animator = player.GetComponent<Animator>();
 
         // Cast a ray at an adjustable angle to the right and draw it
         Vector2 firstAirDirection = Quaternion.Euler(0, 0, firstAirRayAngle) * Vector2.right;
@@ -133,6 +135,7 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, firstAirDirection, firstAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
+            animator.SetBool("isEnemyDetected", true);
             isGroundEnemy = false;
             activeShootAngle = firstAirRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
@@ -144,6 +147,7 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, secondAirDirection, secondAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
+            animator.SetBool("isEnemyDetected", true);
             isGroundEnemy = false;
             activeShootAngle = secondAirRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
@@ -155,6 +159,7 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, thirdAirDirection, thirdAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
+            animator.SetBool("isEnemyDetected", true);
             isGroundEnemy = false;
             activeShootAngle = thirdAirRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
@@ -166,6 +171,7 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, fourthAirDirection, fourthAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
+            animator.SetBool("isEnemyDetected", true);
             isGroundEnemy = false;
             activeShootAngle = fourthAirRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
@@ -177,6 +183,7 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, fifthAirDirection, fifthAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
+            animator.SetBool("isEnemyDetected", true);
             isGroundEnemy = false;
             activeShootAngle = fifthAirRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
@@ -188,6 +195,7 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, sixthAirDirection, sixthAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
+            animator.SetBool("isEnemyDetected", true);
             isGroundEnemy = false;
             activeShootAngle = sixthAirRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
@@ -199,6 +207,7 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, seventhAirDirection, seventhAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
+            animator.SetBool("isEnemyDetected", true);
             isGroundEnemy = false;
             activeShootAngle = seventhAirRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
@@ -210,6 +219,7 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, groundDirection, groundRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
+            animator.SetBool("isEnemyDetected", true);
             isGroundEnemy = true;
             activeShootAngle = groundRayAngle;
             enemyDetected = true; // An enemy is detected, so we can shoot
