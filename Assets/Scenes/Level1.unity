@@ -959,6 +959,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &969901672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6684975870480272910, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+  m_PrefabInstance: {fileID: 2419800983491070621}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1095676595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1486,10 @@ PrefabInstance:
       propertyPath: mediumEnemySpeed
       value: 1.1
       objectReference: {fileID: 0}
+    - target: {fileID: 4441979445924690721, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 969901672}
     - target: {fileID: 4456662215480161938, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_Name
       value: PlayerSetup
