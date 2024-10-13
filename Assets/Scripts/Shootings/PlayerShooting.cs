@@ -131,7 +131,7 @@ public class PlayerShooting : MonoBehaviour
         Vector2 firstAirDirection = Quaternion.Euler(0, 0, firstAirRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, firstAirDirection * firstAirRayDistance, Color.red);
         hit = Physics2D.Raycast(gunTransform.position, firstAirDirection, firstAirRayDistance, enemyLayerMask);
-        if (hit.collider != null && hit.collider.CompareTag("SmallEnemy") || hit.collider != null && hit.collider.CompareTag("MediumEnemy"))
+        if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
             isGroundEnemy = false;
             activeShootAngle = firstAirRayAngle;
@@ -142,7 +142,7 @@ public class PlayerShooting : MonoBehaviour
         Vector2 secondAirDirection = Quaternion.Euler(0, 0, secondAirRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, secondAirDirection * secondAirRayDistance, Color.blue);
         hit = Physics2D.Raycast(gunTransform.position, secondAirDirection, secondAirRayDistance, enemyLayerMask);
-        if (hit.collider != null && hit.collider.CompareTag("SmallEnemy") || hit.collider != null && hit.collider.CompareTag("MediumEnemy"))
+        if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
             isGroundEnemy = false;
             activeShootAngle = secondAirRayAngle;
@@ -153,7 +153,7 @@ public class PlayerShooting : MonoBehaviour
         Vector2 thirdAirDirection = Quaternion.Euler(0, 0, thirdAirRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, thirdAirDirection * thirdAirRayDistance, Color.yellow);
         hit = Physics2D.Raycast(gunTransform.position, thirdAirDirection, thirdAirRayDistance, enemyLayerMask);
-        if (hit.collider != null && hit.collider.CompareTag("SmallEnemy") || hit.collider != null && hit.collider.CompareTag("MediumEnemy"))
+        if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
             isGroundEnemy = false;
             activeShootAngle = thirdAirRayAngle;
@@ -164,7 +164,7 @@ public class PlayerShooting : MonoBehaviour
         Vector2 fourthAirDirection = Quaternion.Euler(0, 0, fourthAirRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, fourthAirDirection * fourthAirRayDistance, Color.cyan);
         hit = Physics2D.Raycast(gunTransform.position, fourthAirDirection, fourthAirRayDistance, enemyLayerMask);
-        if (hit.collider != null && hit.collider.CompareTag("SmallEnemy") || hit.collider != null && hit.collider.CompareTag("MediumEnemy"))
+        if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
             isGroundEnemy = false;
             activeShootAngle = fourthAirRayAngle;
@@ -175,7 +175,7 @@ public class PlayerShooting : MonoBehaviour
         Vector2 fifthAirDirection = Quaternion.Euler(0, 0, fifthAirRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, fifthAirDirection * fifthAirRayDistance, Color.white);
         hit = Physics2D.Raycast(gunTransform.position, fifthAirDirection, fifthAirRayDistance, enemyLayerMask);
-        if (hit.collider != null && hit.collider.CompareTag("SmallEnemy") || hit.collider != null && hit.collider.CompareTag("MediumEnemy"))
+        if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
             isGroundEnemy = false;
             activeShootAngle = fifthAirRayAngle;
@@ -186,7 +186,7 @@ public class PlayerShooting : MonoBehaviour
         Vector2 sixthAirDirection = Quaternion.Euler(0, 0, sixthAirRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, sixthAirDirection * sixthAirRayDistance, Color.green);
         hit = Physics2D.Raycast(gunTransform.position, sixthAirDirection, sixthAirRayDistance, enemyLayerMask);
-        if (hit.collider != null && hit.collider.CompareTag("SmallEnemy") || hit.collider != null && hit.collider.CompareTag("MediumEnemy"))
+        if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
             isGroundEnemy = false;
             activeShootAngle = sixthAirRayAngle;
@@ -197,7 +197,7 @@ public class PlayerShooting : MonoBehaviour
         Vector2 seventhAirDirection = Quaternion.Euler(0, 0, seventhAirRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, seventhAirDirection * seventhAirRayDistance, Color.green);
         hit = Physics2D.Raycast(gunTransform.position, seventhAirDirection, seventhAirRayDistance, enemyLayerMask);
-        if (hit.collider != null && hit.collider.CompareTag("SmallEnemy") || hit.collider != null && hit.collider.CompareTag("MediumEnemy"))
+        if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
             isGroundEnemy = false;
             activeShootAngle = seventhAirRayAngle;
@@ -208,7 +208,7 @@ public class PlayerShooting : MonoBehaviour
         Vector2 groundDirection = Quaternion.Euler(0, 0, groundRayAngle) * Vector2.right;
         Debug.DrawRay(gunTransform.position, groundDirection * groundRayDistance, Color.green);
         hit = Physics2D.Raycast(gunTransform.position, groundDirection, groundRayDistance, enemyLayerMask);
-        if (hit.collider != null && hit.collider.CompareTag("SmallEnemy") || hit.collider != null && hit.collider.CompareTag("MediumEnemy"))
+        if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
             isGroundEnemy = true;
             activeShootAngle = groundRayAngle;

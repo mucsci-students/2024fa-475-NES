@@ -17,6 +17,10 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] float mediumEnemySpeed = 1;
     [SerializeField] int smallEnemyDamage = 10;
     [SerializeField] int mediumEnemyDamage = 10;
+    [SerializeField] float bossHealth = 1000f;
+    [SerializeField] float bossSpeed = 1f;
+    [SerializeField] int bossDamage = 50;
+    
 
 
     void Start()
@@ -67,6 +71,11 @@ public class EnemySpawn : MonoBehaviour
                         enemyStat.SetEnemyHealth(mediumEnemyHealth);
                         enemyStat.SetEnemyDamage(mediumEnemyDamage);
                     }
+                    else if (spawnedEnemy.CompareTag("Boss"))
+                    {
+                        enemyStat.SetEnemyHealth(bossHealth);
+                        enemyStat.SetEnemyDamage(bossDamage);
+                    }
                 }
 
                 // Handle ground and air enemy movement speeds based on tag
@@ -93,6 +102,17 @@ public class EnemySpawn : MonoBehaviour
                     if (airEnemyMovements != null)
                     {
                         airEnemyMovements.SetAirEnemySpeed(mediumEnemySpeed);
+                    }
+                }
+                else if (spawnedEnemy.CompareTag("Boss"))
+                {
+                    if (groundEnemyMovement != null)
+                    {
+                        groundEnemyMovement.SetGroundEnemySpeed(bossSpeed);
+                    }
+                    if (airEnemyMovements != null)
+                    {
+                        airEnemyMovements.SetAirEnemySpeed(bossSpeed);
                     }
                 }
             }
