@@ -23,7 +23,7 @@ public class EnemyCollision : MonoBehaviour
             EnemyStat enemyStat = gameObject.GetComponent<EnemyStat>();
             GunStat gunStat = gun.GetComponent<GunStat>();
             PlayerShooting playerShooting = player.GetComponent<PlayerShooting>();
-            Animator playerAnimator = player.GetComponent<Animator>();
+            Animator playerAnimator = player.GetComponentInChildren<Animator>();
 
             float enemyHealth = enemyStat.GetEnemyHealth();
             float gunDamage = gunStat.GetBulletDamage();
@@ -32,7 +32,7 @@ public class EnemyCollision : MonoBehaviour
             if (enemyHealth <= 0)
             {
                 playerShooting.SetEnemyDetectionStatus(false);
-                playerAnimator.SetBool("isEnemyDetected", true);
+                playerAnimator.SetBool("isEnemyDetected", false);
                 PlayerPrefs.SetInt("PlayerMoney", PlayerPrefs.GetInt("PlayerMoney") + 10);
                 if (gameObject.tag == "Boss") {
                     PlayerPrefs.SetInt("CurrentLevelFinished", 1);
