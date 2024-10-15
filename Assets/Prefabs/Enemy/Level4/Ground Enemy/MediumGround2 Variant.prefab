@@ -13,6 +13,14 @@ PrefabInstance:
       value: MediumGround2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 773446832877676027, guid: dd4f5cf89134b214784c37d79b6c53e9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 773446832877676027, guid: dd4f5cf89134b214784c37d79b6c53e9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 773446832877676027, guid: dd4f5cf89134b214784c37d79b6c53e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -158.69482
       objectReference: {fileID: 0}
@@ -51,6 +59,30 @@ PrefabInstance:
     - target: {fileID: 773446832877676027, guid: dd4f5cf89134b214784c37d79b6c53e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291402649344187280, guid: dd4f5cf89134b214784c37d79b6c53e9, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6faf800285495fd4bbba28854a439c03, type: 2}
+    - target: {fileID: 2676268835347043331, guid: dd4f5cf89134b214784c37d79b6c53e9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -486950781, guid: 1298d8d785a0d044d89eeed354cbf1e9, type: 3}
+    - target: {fileID: 6255046919565311659, guid: dd4f5cf89134b214784c37d79b6c53e9, type: 3}
+      propertyPath: m_Size.y
+      value: 0.29034495
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255046919565311659, guid: dd4f5cf89134b214784c37d79b6c53e9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.11982858
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255046919565311659, guid: dd4f5cf89134b214784c37d79b6c53e9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255046919565311659, guid: dd4f5cf89134b214784c37d79b6c53e9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

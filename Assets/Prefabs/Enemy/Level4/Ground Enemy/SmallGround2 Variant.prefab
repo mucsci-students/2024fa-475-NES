@@ -8,6 +8,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 911655455599761922, guid: 19b08bf4003d43b41b10362ca2c1d5c1, type: 3}
+      propertyPath: m_Size.x
+      value: 2.3492126
+      objectReference: {fileID: 0}
+    - target: {fileID: 911655455599761922, guid: 19b08bf4003d43b41b10362ca2c1d5c1, type: 3}
+      propertyPath: m_Size.y
+      value: 1.540545
+      objectReference: {fileID: 0}
+    - target: {fileID: 911655455599761922, guid: 19b08bf4003d43b41b10362ca2c1d5c1, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.022773504
+      objectReference: {fileID: 0}
+    - target: {fileID: 911655455599761922, guid: 19b08bf4003d43b41b10362ca2c1d5c1, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.33808386
+      objectReference: {fileID: 0}
+    - target: {fileID: 911655455599761922, guid: 19b08bf4003d43b41b10362ca2c1d5c1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 911655455599761922, guid: 19b08bf4003d43b41b10362ca2c1d5c1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463865334610935231, guid: 19b08bf4003d43b41b10362ca2c1d5c1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 115689395, guid: 170e0f4b727f08c429169c538baf72a2, type: 3}
+    - target: {fileID: 3010111168795868838, guid: 19b08bf4003d43b41b10362ca2c1d5c1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010111168795868838, guid: 19b08bf4003d43b41b10362ca2c1d5c1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3010111168795868838, guid: 19b08bf4003d43b41b10362ca2c1d5c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -160.50777
@@ -52,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallGround2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8743117250231036208, guid: 19b08bf4003d43b41b10362ca2c1d5c1, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a7febd341f04cc248b412770b12873f6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
