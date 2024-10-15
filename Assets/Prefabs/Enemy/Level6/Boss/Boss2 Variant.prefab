@@ -8,6 +8,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 387360243463764047, guid: ccbca16689ef91143b511e347dac0104, type: 3}
+      propertyPath: m_Size.x
+      value: 1.4897869
+      objectReference: {fileID: 0}
+    - target: {fileID: 387360243463764047, guid: ccbca16689ef91143b511e347dac0104, type: 3}
+      propertyPath: m_Size.y
+      value: 1.600653
+      objectReference: {fileID: 0}
+    - target: {fileID: 387360243463764047, guid: ccbca16689ef91143b511e347dac0104, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.051365525
+      objectReference: {fileID: 0}
+    - target: {fileID: 387360243463764047, guid: ccbca16689ef91143b511e347dac0104, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.5007679
+      objectReference: {fileID: 0}
+    - target: {fileID: 387360243463764047, guid: ccbca16689ef91143b511e347dac0104, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 387360243463764047, guid: ccbca16689ef91143b511e347dac0104, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.5040038
+      objectReference: {fileID: 0}
+    - target: {fileID: 960011239346046556, guid: ccbca16689ef91143b511e347dac0104, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1632703386, guid: b42ab85efb6a3fa4d9197f353f16db59, type: 3}
+    - target: {fileID: 1440567957651521982, guid: ccbca16689ef91143b511e347dac0104, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440567957651521982, guid: ccbca16689ef91143b511e347dac0104, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 1440567957651521982, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_LocalPosition.x
       value: -158.15
@@ -48,6 +84,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7694784837222977927, guid: ccbca16689ef91143b511e347dac0104, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6edf0d075bc29454aa53f6e86c24baf5, type: 2}
     - target: {fileID: 8736206405624747004, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_Name
       value: Boss2 Variant

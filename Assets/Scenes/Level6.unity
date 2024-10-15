@@ -1371,6 +1371,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: timeDelay
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossDamage
       value: 0
       objectReference: {fileID: 0}
@@ -1384,12 +1388,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
-      value: 1.3
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: mediumEnemySpeed
-      value: 1.1
+      value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: smallEnemyDamage
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: smallEnemyHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: mediumEnemyDamage
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: mediumEnemyHealth
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: enemyPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 3665603806589627664, guid: a77d59c2f83f55349b8ad055114afc5b, type: 3}
+    - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: enemyPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7471471006200191217, guid: fbc6400d3bfeb874fba27c39db5a4067, type: 3}
     - target: {fileID: 3056671673410238915, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -173.6
@@ -1432,7 +1460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3287805558834634163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.299995
+      value: 97.8
       objectReference: {fileID: 0}
     - target: {fileID: 3482833788076961188, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1445,6 +1473,10 @@ PrefabInstance:
     - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossSpeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: timeDelay
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossDamage
@@ -1460,15 +1492,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
-      value: 1.3
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: mediumEnemySpeed
-      value: 1.1
+      value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: smallEnemyDamage
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: smallEnemyHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: mediumEnemyDamage
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: mediumEnemyHealth
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: enemyPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 3665603806589627664, guid: a77d59c2f83f55349b8ad055114afc5b, type: 3}
+    - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: enemyPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7471471006200191217, guid: fbc6400d3bfeb874fba27c39db5a4067, type: 3}
     - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossSpeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: timeDelay
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossDamage
@@ -1480,12 +1540,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
-      value: 1.3
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: mediumEnemySpeed
-      value: 1.1
+      value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: smallEnemyDamage
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: smallEnemyHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: mediumEnemyDamage
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: mediumEnemyHealth
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: enemyPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 5995911213256358343, guid: f1ef586ba57b41e41bb28479fcd85497, type: 3}
+    - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: enemyPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 658885619621720369, guid: 796a67763dafa2a40a7840b6d56ff4a9, type: 3}
     - target: {fileID: 4441979445924690721, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: player
       value: 
@@ -1503,6 +1587,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: timeDelay
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossDamage
       value: 0
       objectReference: {fileID: 0}
@@ -1512,12 +1600,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
-      value: 1.3
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: mediumEnemySpeed
-      value: 1.1
+      value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: smallEnemyDamage
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: smallEnemyHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: mediumEnemyDamage
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: mediumEnemyHealth
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: enemyPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 5995911213256358343, guid: f1ef586ba57b41e41bb28479fcd85497, type: 3}
+    - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: enemyPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 658885619621720369, guid: 796a67763dafa2a40a7840b6d56ff4a9, type: 3}
     - target: {fileID: 6373246753894366196, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossSpeed
       value: 0
@@ -1564,11 +1676,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7169510792107688374, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.3
+      value: 97.8
       objectReference: {fileID: 0}
     - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossSpeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: timeDelay
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossDamage
@@ -1580,23 +1696,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
-      value: 1.3
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: mediumEnemySpeed
-      value: 1.1
+      value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: smallEnemyDamage
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: smallEnemyHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: mediumEnemyDamage
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: mediumEnemyHealth
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: enemyPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 5995911213256358343, guid: f1ef586ba57b41e41bb28479fcd85497, type: 3}
+    - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: enemyPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 658885619621720369, guid: 796a67763dafa2a40a7840b6d56ff4a9, type: 3}
     - target: {fileID: 8146567734865263037, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.299995
+      value: 97.8
       objectReference: {fileID: 0}
     - target: {fileID: 8927387667674357590, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossSpeed
-      value: 1.8
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927387667674357590, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: bossDamage
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 8927387667674357590, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossHealth
-      value: 500
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 8927387667674357590, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
@@ -1622,9 +1766,17 @@ PrefabInstance:
       propertyPath: mediumEnemyHealth
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8927387667674357590, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: enemyPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 5478371510079970276, guid: 21b2eaebd17c6584e87d1326162a9c0f, type: 3}
     - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossSpeed
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: timeDelay
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossDamage
@@ -1640,12 +1792,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
-      value: 1.3
+      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: mediumEnemySpeed
-      value: 1.1
+      value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: smallEnemyDamage
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: smallEnemyHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: mediumEnemyDamage
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: mediumEnemyHealth
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: enemyPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 3665603806589627664, guid: a77d59c2f83f55349b8ad055114afc5b, type: 3}
+    - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: enemyPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7471471006200191217, guid: fbc6400d3bfeb874fba27c39db5a4067, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

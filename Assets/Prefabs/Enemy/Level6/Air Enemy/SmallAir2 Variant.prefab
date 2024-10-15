@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1776474938099859062, guid: d53c2f0aa7aea8141acacbd5e4962a14, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 617272392, guid: 0281f84cd7177d64c98b744edac14e82, type: 3}
+    - target: {fileID: 4829342333641983246, guid: d53c2f0aa7aea8141acacbd5e4962a14, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: e7fb71d6eb9ded948a4b56ad87067825, type: 2}
     - target: {fileID: 5484821412988574405, guid: d53c2f0aa7aea8141acacbd5e4962a14, type: 3}
       propertyPath: m_LocalPosition.x
       value: -162.22
@@ -51,6 +59,30 @@ PrefabInstance:
     - target: {fileID: 5566677192906710302, guid: d53c2f0aa7aea8141acacbd5e4962a14, type: 3}
       propertyPath: m_Name
       value: SmallAir2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068598855664191413, guid: d53c2f0aa7aea8141acacbd5e4962a14, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8129796
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068598855664191413, guid: d53c2f0aa7aea8141acacbd5e4962a14, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0327396
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068598855664191413, guid: d53c2f0aa7aea8141acacbd5e4962a14, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.11729562
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068598855664191413, guid: d53c2f0aa7aea8141acacbd5e4962a14, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.24240312
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068598855664191413, guid: d53c2f0aa7aea8141acacbd5e4962a14, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068598855664191413, guid: d53c2f0aa7aea8141acacbd5e4962a14, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

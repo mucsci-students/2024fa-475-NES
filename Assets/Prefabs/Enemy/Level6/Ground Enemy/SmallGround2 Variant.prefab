@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 20517217395598224, guid: 15ff583cbb324174c917c777ca47701b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 20517217395598224, guid: 15ff583cbb324174c917c777ca47701b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -160.50777
       objectReference: {fileID: 0}
@@ -48,6 +52,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2677440189000156980, guid: 15ff583cbb324174c917c777ca47701b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8194321
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677440189000156980, guid: 15ff583cbb324174c917c777ca47701b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9712506
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677440189000156980, guid: 15ff583cbb324174c917c777ca47701b, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.34406564
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677440189000156980, guid: 15ff583cbb324174c917c777ca47701b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.19424108
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677440189000156980, guid: 15ff583cbb324174c917c777ca47701b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.3125
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677440189000156980, guid: 15ff583cbb324174c917c777ca47701b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458077235116089481, guid: 15ff583cbb324174c917c777ca47701b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1895250770, guid: cdcb4ac43f0c3b8469dba944c034101c, type: 3}
+    - target: {fileID: 5826319489536095238, guid: 15ff583cbb324174c917c777ca47701b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 98d2f1c877f3f754899821b11de3d724, type: 2}
     - target: {fileID: 7054674822214239998, guid: 15ff583cbb324174c917c777ca47701b, type: 3}
       propertyPath: m_Name
       value: SmallGround2 Variant
