@@ -12,6 +12,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallGround2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4119386419108629336, guid: bd839ce9815bdb449ba017ed0d487cd8, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b4fc21704cf3acc4897418065a0d3f4e, type: 2}
+    - target: {fileID: 5537196636977477738, guid: bd839ce9815bdb449ba017ed0d487cd8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.40664262
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537196636977477738, guid: bd839ce9815bdb449ba017ed0d487cd8, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0466787
+      objectReference: {fileID: 0}
+    - target: {fileID: 5537196636977477738, guid: bd839ce9815bdb449ba017ed0d487cd8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065921037813129175, guid: bd839ce9815bdb449ba017ed0d487cd8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1071050973, guid: c11098080865fbd41af6113277c34b37, type: 3}
+    - target: {fileID: 7618079457057103054, guid: bd839ce9815bdb449ba017ed0d487cd8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 7618079457057103054, guid: bd839ce9815bdb449ba017ed0d487cd8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -160.50777

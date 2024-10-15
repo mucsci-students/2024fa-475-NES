@@ -8,6 +8,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 768571157211390706, guid: 44162778e1a3420449a3caf80c9ecea0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.47808534
+      objectReference: {fileID: 0}
+    - target: {fileID: 768571157211390706, guid: 44162778e1a3420449a3caf80c9ecea0, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.15461963
+      objectReference: {fileID: 0}
+    - target: {fileID: 768571157211390706, guid: 44162778e1a3420449a3caf80c9ecea0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 768571157211390706, guid: 44162778e1a3420449a3caf80c9ecea0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5588717219661858761, guid: 44162778e1a3420449a3caf80c9ecea0, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1445a4e3e948c484588316850bc65220, type: 2}
+    - target: {fileID: 6259777697937258914, guid: 44162778e1a3420449a3caf80c9ecea0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -14
+      objectReference: {fileID: 0}
     - target: {fileID: 6259777697937258914, guid: 44162778e1a3420449a3caf80c9ecea0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -158.69482
@@ -52,6 +76,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumGround2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8737233136324855898, guid: 44162778e1a3420449a3caf80c9ecea0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 722155516, guid: 553b79fb19d017142b3897f5655098ba, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
