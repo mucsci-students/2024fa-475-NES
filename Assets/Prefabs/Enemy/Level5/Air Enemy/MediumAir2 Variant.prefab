@@ -8,9 +8,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3204835314262489552, guid: cdbce31d3eb11f04fbdfd6708400788e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1968464120, guid: a624c8ab8844ebb4f9afb45f6ebe3973, type: 3}
+    - target: {fileID: 4865772583297801149, guid: cdbce31d3eb11f04fbdfd6708400788e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865772583297801149, guid: cdbce31d3eb11f04fbdfd6708400788e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5793430662015743257, guid: cdbce31d3eb11f04fbdfd6708400788e, type: 3}
       propertyPath: m_Name
       value: MediumAir2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842543048855609428, guid: cdbce31d3eb11f04fbdfd6708400788e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6842543048855609428, guid: cdbce31d3eb11f04fbdfd6708400788e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6842543048855609428, guid: cdbce31d3eb11f04fbdfd6708400788e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,6 +72,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8099960821522397228, guid: cdbce31d3eb11f04fbdfd6708400788e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 31c90716868369d4c8d668fa2ad90309, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

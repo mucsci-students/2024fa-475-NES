@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1287436188767577502, guid: 1a237d0828a804f4491f3998ccb74229, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1669691225, guid: e4d8e388db5fe2948ad79df70525241c, type: 3}
     - target: {fileID: 4916353573418370806, guid: 1a237d0828a804f4491f3998ccb74229, type: 3}
       propertyPath: m_Name
       value: SmallAir2 Variant
@@ -51,6 +55,34 @@ PrefabInstance:
     - target: {fileID: 5000309420400951597, guid: 1a237d0828a804f4491f3998ccb74229, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5368272806298951398, guid: 1a237d0828a804f4491f3998ccb74229, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4f89f7fdcf2fc7c49b41027f9e64ba9c, type: 2}
+    - target: {fileID: 7386960053004590173, guid: 1a237d0828a804f4491f3998ccb74229, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5146004
+      objectReference: {fileID: 0}
+    - target: {fileID: 7386960053004590173, guid: 1a237d0828a804f4491f3998ccb74229, type: 3}
+      propertyPath: m_Size.y
+      value: 0.51467425
+      objectReference: {fileID: 0}
+    - target: {fileID: 7386960053004590173, guid: 1a237d0828a804f4491f3998ccb74229, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.03189397
+      objectReference: {fileID: 0}
+    - target: {fileID: 7386960053004590173, guid: 1a237d0828a804f4491f3998ccb74229, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.016629606
+      objectReference: {fileID: 0}
+    - target: {fileID: 7386960053004590173, guid: 1a237d0828a804f4491f3998ccb74229, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7386960053004590173, guid: 1a237d0828a804f4491f3998ccb74229, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

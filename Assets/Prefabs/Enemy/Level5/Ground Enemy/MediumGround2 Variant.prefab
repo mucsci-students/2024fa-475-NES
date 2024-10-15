@@ -8,6 +8,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1971627945548440405, guid: 692b465c51f6517448bd8a98bdf27505, type: 3}
+      propertyPath: m_Size.x
+      value: 0.42486113
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971627945548440405, guid: 692b465c51f6517448bd8a98bdf27505, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5122926
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971627945548440405, guid: 692b465c51f6517448bd8a98bdf27505, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0017343163
+      objectReference: {fileID: 0}
+    - target: {fileID: 1971627945548440405, guid: 692b465c51f6517448bd8a98bdf27505, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.008484945
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127648240092690437, guid: 692b465c51f6517448bd8a98bdf27505, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5127648240092690437, guid: 692b465c51f6517448bd8a98bdf27505, type: 3}
       propertyPath: m_LocalPosition.x
       value: -158.69482
@@ -52,6 +72,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MediumGround2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6663426383602648686, guid: 692b465c51f6517448bd8a98bdf27505, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b6b77ae65b18e5e40966a801fbb09eec, type: 2}
+    - target: {fileID: 7545430913627032061, guid: 692b465c51f6517448bd8a98bdf27505, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1632733223, guid: 447f35eecdac27d4885c33d58f913c06, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
