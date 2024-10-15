@@ -10,39 +10,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 387360243463764047, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_Size.x
-      value: 1.4897869
+      value: 0.75253475
       objectReference: {fileID: 0}
     - target: {fileID: 387360243463764047, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_Size.y
-      value: 1.600653
+      value: 0.9446237
       objectReference: {fileID: 0}
     - target: {fileID: 387360243463764047, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_Offset.x
-      value: 0.051365525
+      value: 0.03262174
       objectReference: {fileID: 0}
     - target: {fileID: 387360243463764047, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_Offset.y
-      value: -0.5007679
+      value: -0.3726859
       objectReference: {fileID: 0}
     - target: {fileID: 387360243463764047, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 4.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 387360243463764047, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.5040038
+      value: 2.0010812
       objectReference: {fileID: 0}
     - target: {fileID: 960011239346046556, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1632703386, guid: b42ab85efb6a3fa4d9197f353f16db59, type: 3}
+      objectReference: {fileID: 1387950208, guid: 1f5d151b3174f9248a127fd974f05e1f, type: 3}
     - target: {fileID: 1440567957651521982, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_LocalScale.x
-      value: 50
+      value: -25
       objectReference: {fileID: 0}
     - target: {fileID: 1440567957651521982, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1440567957651521982, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_LocalPosition.x
@@ -87,7 +87,7 @@ PrefabInstance:
     - target: {fileID: 7694784837222977927, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 6edf0d075bc29454aa53f6e86c24baf5, type: 2}
+      objectReference: {fileID: 9100000, guid: c86205a246a45514685a7ec3e133f3fd, type: 2}
     - target: {fileID: 8736206405624747004, guid: ccbca16689ef91143b511e347dac0104, type: 3}
       propertyPath: m_Name
       value: Boss2 Variant
