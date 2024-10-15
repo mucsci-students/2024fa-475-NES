@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - Wall
   - Bullet
   - Stage1
@@ -12,6 +11,8 @@ TagManager:
   - Stage3
   - Stage4
   - Boss
+  - SmallEnemy
+  - MediumEnemy
   layers:
   - Default
   - TransparentFX

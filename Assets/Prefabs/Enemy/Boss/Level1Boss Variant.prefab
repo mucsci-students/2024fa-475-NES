@@ -229,6 +229,10 @@ PrefabInstance:
       value: Level1Boss Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5493241046746051457, guid: 770d59dccbd91194282e9818841a47fc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5493241046746051457, guid: 770d59dccbd91194282e9818841a47fc, type: 3}
       propertyPath: m_TagString
       value: Boss
       objectReference: {fileID: 0}
