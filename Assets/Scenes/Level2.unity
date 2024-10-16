@@ -1362,6 +1362,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.79
       objectReference: {fileID: 0}
+    - target: {fileID: 1074416571763153258, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 58.509987
+      objectReference: {fileID: 0}
     - target: {fileID: 1568054920925578884, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1392,11 +1396,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
-      value: 0.9
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: mediumEnemySpeed
-      value: 0.75
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemyDamage
@@ -1472,7 +1476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3287805558834634163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.299995
+      value: 89.899994
       objectReference: {fileID: 0}
     - target: {fileID: 3482833788076961188, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1500,11 +1504,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
-      value: 0.9
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: mediumEnemySpeed
-      value: 0.75
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemyDamage
@@ -1544,11 +1548,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
-      value: 0.9
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: mediumEnemySpeed
-      value: 0.75
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemyDamage
@@ -1582,6 +1586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerSetup
       objectReference: {fileID: 0}
+    - target: {fileID: 4522425931966416060, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 58.509987
+      objectReference: {fileID: 0}
     - target: {fileID: 4973271891943181519, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: fireRate
       value: 1
@@ -1600,11 +1608,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
-      value: 0.9
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: mediumEnemySpeed
-      value: 0.75
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemyDamage
@@ -1692,7 +1700,7 @@ PrefabInstance:
       objectReference: {fileID: 2219607534183123387, guid: 58d73bc873b6d9d40ba92f1660cfd1b2, type: 3}
     - target: {fileID: 7169510792107688374, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.3
+      value: 89.9
       objectReference: {fileID: 0}
     - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossSpeed
@@ -1708,11 +1716,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
-      value: 0.9
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: mediumEnemySpeed
-      value: 0.75
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemyDamage
@@ -1738,9 +1746,13 @@ PrefabInstance:
       propertyPath: enemyPrefabs.Array.data[1]
       value: 
       objectReference: {fileID: 6500152338821402057, guid: 44162778e1a3420449a3caf80c9ecea0, type: 3}
+    - target: {fileID: 7263298628242405561, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 70.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8146567734865263037, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.299995
+      value: 89.899994
       objectReference: {fileID: 0}
     - target: {fileID: 8927387667674357590, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossSpeed
@@ -1804,11 +1816,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
-      value: 0.9
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: mediumEnemySpeed
-      value: 0.75
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemyDamage

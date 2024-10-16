@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   airEnemySpeed: 1
-  strikeSpeed: 5
+  strikeSpeed: 2.5
   straightDuration: 2
 --- !u!82 &-8962352199234388522
 AudioSource:
