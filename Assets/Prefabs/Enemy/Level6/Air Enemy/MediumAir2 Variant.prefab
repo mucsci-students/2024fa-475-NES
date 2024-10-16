@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 31fd035ab410e074fb3ca790885312e7, type: 2}
+    - target: {fileID: 1611447696963064840, guid: d4adae1149fa30a48b69020215d162d0, type: 3}
+      propertyPath: strikeSpeed
+      value: 2.9
+      objectReference: {fileID: 0}
     - target: {fileID: 2751795175751534646, guid: d4adae1149fa30a48b69020215d162d0, type: 3}
       propertyPath: m_Name
       value: MediumAir2 Variant
