@@ -70,7 +70,7 @@ public class EnemyCollision : MonoBehaviour
                 int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
                 EnemyStat enemyStat = gameObject.GetComponent<EnemyStat>();
                 //enemyStat.SetEnemyDamage(10 / playerVehicleLevel);
-                int damage = enemyStat.GetEnemyDamage();
+                int damage = enemyStat.GetEnemyDamage() / playerVehicleLevel;
 
                 if (playerArmor >= damage)
                 {
