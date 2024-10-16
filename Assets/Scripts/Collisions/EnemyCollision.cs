@@ -63,7 +63,7 @@ public class EnemyCollision : MonoBehaviour
 
         if (collision.gameObject.tag == "Wall")
         {
-            if (gameObject.tag == "Enemy") {
+            if (gameObject.tag == "MediumEnemy" || gameObject.tag == "SmallEnemy") {
                 int playerArmor = PlayerPrefs.GetInt("PlayerArmor");
                 int playerHealth = PlayerPrefs.GetInt("PlayerHealth");
                 int playerVehicleLevel = PlayerPrefs.GetInt("PlayerVehicleLevel");

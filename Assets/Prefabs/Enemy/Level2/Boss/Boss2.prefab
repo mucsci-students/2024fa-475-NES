@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   airEnemySpeed: 1
-  strikeSpeed: 5
+  strikeSpeed: 2.5
   straightDuration: 2
 --- !u!114 &4024041384368369462
 MonoBehaviour:
