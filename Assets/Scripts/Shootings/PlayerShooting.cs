@@ -128,6 +128,7 @@ public class PlayerShooting : MonoBehaviour
     {
         RaycastHit2D hit;
         Animator animator = player.GetComponent<Animator>();
+        float closestDistance = Mathf.Infinity; // Initialize with a large value to store the closest distance detected
 
         // Cast a ray at an adjustable angle to the right and draw it
         Vector2 firstAirDirection = Quaternion.Euler(0, 0, firstAirRayAngle) * Vector2.right;
@@ -135,11 +136,15 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, firstAirDirection, firstAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
-            animator.SetBool("isEnemyDetected", true);
-            isGroundEnemy = false;
-            activeShootAngle = firstAirRayAngle;
-            enemyDetected = true; // An enemy is detected, so we can shoot
-            //Debug.Log("Hit enemy at " + activeShootAngle + " degrees: " + hit.collider.name);
+            float distance = Vector2.Distance(gunTransform.position, hit.point);
+            if (distance < closestDistance) // Check if this enemy is the closest one detected so far
+            {
+                closestDistance = distance;
+                animator.SetBool("isEnemyDetected", true);
+                isGroundEnemy = false;
+                activeShootAngle = firstAirRayAngle;
+                enemyDetected = true; // An enemy is detected, so we can shoot
+            }
         }
 
         Vector2 secondAirDirection = Quaternion.Euler(0, 0, secondAirRayAngle) * Vector2.right;
@@ -147,11 +152,15 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, secondAirDirection, secondAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
-            animator.SetBool("isEnemyDetected", true);
-            isGroundEnemy = false;
-            activeShootAngle = secondAirRayAngle;
-            enemyDetected = true; // An enemy is detected, so we can shoot
-            //Debug.Log("Hit enemy at " + activeShootAngle + " degrees: " + hit.collider.name);
+            float distance = Vector2.Distance(gunTransform.position, hit.point);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                animator.SetBool("isEnemyDetected", true);
+                isGroundEnemy = false;
+                activeShootAngle = secondAirRayAngle;
+                enemyDetected = true;
+            }
         }
 
         Vector2 thirdAirDirection = Quaternion.Euler(0, 0, thirdAirRayAngle) * Vector2.right;
@@ -159,11 +168,15 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, thirdAirDirection, thirdAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
-            animator.SetBool("isEnemyDetected", true);
-            isGroundEnemy = false;
-            activeShootAngle = thirdAirRayAngle;
-            enemyDetected = true; // An enemy is detected, so we can shoot
-            //Debug.Log("Hit enemy at " + activeShootAngle + " degrees: " + hit.collider.name);
+            float distance = Vector2.Distance(gunTransform.position, hit.point);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                animator.SetBool("isEnemyDetected", true);
+                isGroundEnemy = false;
+                activeShootAngle = thirdAirRayAngle;
+                enemyDetected = true;
+            }
         }
 
         Vector2 fourthAirDirection = Quaternion.Euler(0, 0, fourthAirRayAngle) * Vector2.right;
@@ -171,11 +184,15 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, fourthAirDirection, fourthAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
-            animator.SetBool("isEnemyDetected", true);
-            isGroundEnemy = false;
-            activeShootAngle = fourthAirRayAngle;
-            enemyDetected = true; // An enemy is detected, so we can shoot
-            //Debug.Log("Hit enemy at " + activeShootAngle + " degrees: " + hit.collider.name);
+            float distance = Vector2.Distance(gunTransform.position, hit.point);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                animator.SetBool("isEnemyDetected", true);
+                isGroundEnemy = false;
+                activeShootAngle = fourthAirRayAngle;
+                enemyDetected = true;
+            }
         }
 
         Vector2 fifthAirDirection = Quaternion.Euler(0, 0, fifthAirRayAngle) * Vector2.right;
@@ -183,11 +200,15 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, fifthAirDirection, fifthAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
-            animator.SetBool("isEnemyDetected", true);
-            isGroundEnemy = false;
-            activeShootAngle = fifthAirRayAngle;
-            enemyDetected = true; // An enemy is detected, so we can shoot
-            //Debug.Log("Hit enemy at " + activeShootAngle + " degrees: " + hit.collider.name);
+            float distance = Vector2.Distance(gunTransform.position, hit.point);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                animator.SetBool("isEnemyDetected", true);
+                isGroundEnemy = false;
+                activeShootAngle = fifthAirRayAngle;
+                enemyDetected = true;
+            }
         }
 
         Vector2 sixthAirDirection = Quaternion.Euler(0, 0, sixthAirRayAngle) * Vector2.right;
@@ -195,11 +216,15 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, sixthAirDirection, sixthAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
-            animator.SetBool("isEnemyDetected", true);
-            isGroundEnemy = false;
-            activeShootAngle = sixthAirRayAngle;
-            enemyDetected = true; // An enemy is detected, so we can shoot
-            //Debug.Log($"Distance {groundRayDistance}");
+            float distance = Vector2.Distance(gunTransform.position, hit.point);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                animator.SetBool("isEnemyDetected", true);
+                isGroundEnemy = false;
+                activeShootAngle = sixthAirRayAngle;
+                enemyDetected = true;
+            }
         }
 
         Vector2 seventhAirDirection = Quaternion.Euler(0, 0, seventhAirRayAngle) * Vector2.right;
@@ -207,11 +232,15 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, seventhAirDirection, seventhAirRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
-            animator.SetBool("isEnemyDetected", true);
-            isGroundEnemy = false;
-            activeShootAngle = seventhAirRayAngle;
-            enemyDetected = true; // An enemy is detected, so we can shoot
-            //Debug.Log($"Distance {groundRayDistance}");
+            float distance = Vector2.Distance(gunTransform.position, hit.point);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                animator.SetBool("isEnemyDetected", true);
+                isGroundEnemy = false;
+                activeShootAngle = seventhAirRayAngle;
+                enemyDetected = true;
+            }
         }
 
         Vector2 groundDirection = Quaternion.Euler(0, 0, groundRayAngle) * Vector2.right;
@@ -219,11 +248,16 @@ public class PlayerShooting : MonoBehaviour
         hit = Physics2D.Raycast(gunTransform.position, groundDirection, groundRayDistance, enemyLayerMask);
         if (hit.collider != null && (hit.collider.CompareTag("SmallEnemy") || hit.collider.CompareTag("MediumEnemy") || hit.collider.CompareTag("Boss")))
         {
-            animator.SetBool("isEnemyDetected", true);
-            isGroundEnemy = true;
-            activeShootAngle = groundRayAngle;
-            enemyDetected = true; // An enemy is detected, so we can shoot
-            //Debug.Log($"Distance {groundRayDistance}");
+            float distance = Vector2.Distance(gunTransform.position, hit.point);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                animator.SetBool("isEnemyDetected", true);
+                isGroundEnemy = true;
+                activeShootAngle = groundRayAngle;
+                enemyDetected = true;
+            }
         }
     }
+
 }
