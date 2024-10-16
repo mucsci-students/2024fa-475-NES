@@ -63,31 +63,35 @@ public class EnemyCollision : MonoBehaviour
 
         if (collision.gameObject.tag == "Wall")
         {
-            int playerArmor = PlayerPrefs.GetInt("PlayerArmor");
-            int playerHealth = PlayerPrefs.GetInt("PlayerHealth");
-            int playerVehicleLevel = PlayerPrefs.GetInt("PlayerVehicleLevel");
-            int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
-            EnemyStat enemyStat = gameObject.GetComponent<EnemyStat>();
-            //enemyStat.SetEnemyDamage(10 / playerVehicleLevel);
-            int damage = enemyStat.GetEnemyDamage();
+            if (gameObject.tag == "Enemy") {
+                int playerArmor = PlayerPrefs.GetInt("PlayerArmor");
+                int playerHealth = PlayerPrefs.GetInt("PlayerHealth");
+                int playerVehicleLevel = PlayerPrefs.GetInt("PlayerVehicleLevel");
+                int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+                EnemyStat enemyStat = gameObject.GetComponent<EnemyStat>();
+                //enemyStat.SetEnemyDamage(10 / playerVehicleLevel);
+                int damage = enemyStat.GetEnemyDamage();
 
-            if (playerArmor >= damage)
-            {
-                playerArmor -= damage;
-                PlayerPrefs.SetInt("PlayerArmor", playerArmor);
-            } else if (playerArmor < damage && playerArmor > 0)
-            {
-                int dif = damage - playerArmor;
-                playerArmor = 0;
-                PlayerPrefs.SetInt("PlayerArmor", playerArmor);
-                playerHealth -= dif;
-                PlayerPrefs.SetInt("PlayerHealth", playerHealth);
-            } else if (playerArmor == 0)
-            {
-                playerHealth -= damage;
-                PlayerPrefs.SetInt("PlayerHealth", playerHealth);
+                if (playerArmor >= damage)
+                {
+                    playerArmor -= damage;
+                    PlayerPrefs.SetInt("PlayerArmor", playerArmor);
+                } else if (playerArmor < damage && playerArmor > 0)
+                {
+                    int dif = damage - playerArmor;
+                    playerArmor = 0;
+                    PlayerPrefs.SetInt("PlayerArmor", playerArmor);
+                    playerHealth -= dif;
+                    PlayerPrefs.SetInt("PlayerHealth", playerHealth);
+                } else if (playerArmor == 0)
+                {
+                    playerHealth -= damage;
+                    PlayerPrefs.SetInt("PlayerHealth", playerHealth);
+                }
+                Destroy(gameObject);
+            } else if (gameObject.tag == "Boss") {
+                PlayerPrefs.SetInt("PlayerHealth", 0);
             }
-            Destroy(gameObject);
         }
     }
 }
