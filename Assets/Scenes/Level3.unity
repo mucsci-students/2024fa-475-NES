@@ -1862,7 +1862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: firstEnemyNum
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: secondEnemyNum
