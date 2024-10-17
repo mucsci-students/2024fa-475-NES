@@ -81,7 +81,6 @@ public class PlayerShooting : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.F))
         {
-            FireBullet();
             if (PlayerPrefs.GetInt("PlayerWeaponLevel") == 18) {
                 FireBullet();
             }
