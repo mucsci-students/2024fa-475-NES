@@ -598,7 +598,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -146.59128, y: 19.391562, z: -10.123874}
+  m_LocalPosition: {x: -144.48874, y: 19.391562, z: -10.123874}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -867,7 +867,7 @@ Transform:
   m_GameObject: {fileID: 655782782}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -146.59128, y: 19.391562, z: -10.123874}
+  m_LocalPosition: {x: -144.48874, y: 19.391562, z: -10.123874}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1849,12 +1849,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: timeDelay
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossDamage
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossHealth
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: firstEnemyNum
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2536049839963226526, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: secondEnemyNum
@@ -1949,12 +1957,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: timeDelay
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossDamage
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossHealth
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: firstEnemyNum
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: secondEnemyNum
@@ -1997,12 +2013,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: timeDelay
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossDamage
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossHealth
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: firstEnemyNum
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: secondEnemyNum
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
@@ -2053,12 +2081,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: timeDelay
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossDamage
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossHealth
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: firstEnemyNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: secondEnemyNum
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6045421636453654920, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
@@ -2145,12 +2185,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: timeDelay
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossDamage
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossHealth
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: firstEnemyNum
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: secondEnemyNum
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7191787581764549726, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: smallEnemySpeed
@@ -2233,12 +2285,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: timeDelay
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossDamage
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossHealth
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: firstEnemyNum
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9196093607228482960, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: secondEnemyNum
