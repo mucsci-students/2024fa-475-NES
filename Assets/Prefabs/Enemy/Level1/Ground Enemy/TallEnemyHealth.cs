@@ -9,8 +9,10 @@ public class EnemyHealth : MonoBehaviour
     private float health;
     private UnityEngine.Vector3 screenPosition;
     // Start is called before the first frame update
+
     void Start()
     {
+        Application.targetFrameRate = 60;
         enemyStat = GameObject.GetComponent<EnemyStat>();
         health = enemyStat.GetEnemyHealth();
         screenPosition = Camera.main.WorldToScreenPoint(GameObject.transform.position);

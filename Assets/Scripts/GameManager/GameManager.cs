@@ -26,10 +26,15 @@ public class GameManager : MonoBehaviour
     private GUIStyle titleStyle;
     private GUIStyle buttonStyle;
     private GUIStyle labelStyle;
+    void Awake()
+    {
+        Application.targetFrameRate = 60; // Cap to 60 FPS
+        Time.timeScale = 1; // Ensure time scale is normal
+    }
 
     // Start is called before the first frame update
     void Start()
-    {   
+    {
         currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         // Load any player data
         playerHealth = PlayerPrefs.GetInt("PlayerHealth");

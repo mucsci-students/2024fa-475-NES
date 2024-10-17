@@ -59,6 +59,7 @@ public class TriggerSpawn : MonoBehaviour
             isStage4 = true;
             if (isStage4)
             {
+                DestroyAllEnemiesExceptBoss();
                 spawningObject3.SetActive(false);
                 spawningObject4.SetActive(true);
                 PlayerMovements movement = player.GetComponent<PlayerMovements>();
@@ -66,6 +67,25 @@ public class TriggerSpawn : MonoBehaviour
             }
             Invoke("SetBossSpawnFalse", 5f);
             //Debug.Log("Fourth Check Point!");
+        }
+    }
+
+    void DestroyAllEnemiesExceptBoss()
+    {
+        // Find all game objects with the tag "SmallEnemy" and "MediumEnemy"
+        GameObject[] smallEnemies = GameObject.FindGameObjectsWithTag("SmallEnemy");
+        GameObject[] mediumEnemies = GameObject.FindGameObjectsWithTag("MediumEnemy");
+
+        // Combine both arrays into a single list
+        List<GameObject> allEnemies = new List<GameObject>();
+        allEnemies.AddRange(smallEnemies);
+        allEnemies.AddRange(mediumEnemies);
+
+        // Loop through all enemies and destroy them
+        foreach (GameObject enemy in allEnemies)
+        {
+            // Destroy the enemy
+            Destroy(enemy);
         }
     }
 

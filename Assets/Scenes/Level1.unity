@@ -598,7 +598,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -145.99127, y: 19.391562, z: -10.123874}
+  m_LocalPosition: {x: 0.21126556, y: 19.391562, z: -10.123874}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -867,7 +867,7 @@ Transform:
   m_GameObject: {fileID: 655782782}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -145.99127, y: 19.391562, z: -10.123874}
+  m_LocalPosition: {x: 0.21126556, y: 19.391562, z: -10.123874}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1870,7 +1870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3056671673410238915, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -175
+      value: -30.9
       objectReference: {fileID: 0}
     - target: {fileID: 3056671673410238915, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1943,6 +1943,10 @@ PrefabInstance:
     - target: {fileID: 3548994568614853013, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: mediumEnemySpeed
       value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3959587306592202167, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4161560533440643163, guid: f8bdd858e4d419c45925065599880ed1, type: 3}
       propertyPath: bossSpeed

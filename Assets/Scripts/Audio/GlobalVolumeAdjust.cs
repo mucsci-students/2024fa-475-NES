@@ -7,6 +7,7 @@ public class GlobalVolumeAdjust : MonoBehaviour
     public GameObject audioSource;
     private int volume;
     // Start is called before the first frame update
+
     void Start()
     {
         volume = PlayerPrefs.GetInt("Volume");
